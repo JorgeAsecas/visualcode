@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div>
+    <h1 id="cabecera">Desarrollo Web En Entorno Cliente</h1>
+    <div id="div1"></div>
+    <strong>
+    <div id="div2"></div>
+    </strong>
+  </div>
+  <br>
+  <br>
+
+  <script>
+  var numero1=parseInt(prompt("Introduce tu nota:" ));
+
+  document.getElementById("div1").innerHTML=("Tu nota es : " + numero1);
+
+  (numero1 < 0 || numero1 > 10) ? document.getElementById("div2").innerHTML=("Nota incorrecta") :
+  (numero1 < 5) ? document.getElementById("div2").innerHTML=("Suspenso") :
+  (numero1 < 7) ? document.getElementById("div2").innerHTML=("Aprobado") :
+  (numero1 < 9) ? document.getElementById("div2").innerHTML=("Notable") :
+  document.getElementById("div2").innerHTML=("Sobresaliente");
+  </script>
+
+
+</body>
+</html>

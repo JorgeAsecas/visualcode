@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <script>
+        var numero1=parseInt(prompt("Introduce un numero:" ));
+        var numero2=parseInt(prompt("Introduce un numero:" ));
+
+
+        if (numero1 < numero2){
+            document.write('Los multiplos entre '+numero1+' y '+numero2+' son:')
+            for (i = numero1; i <= numero2; i++){
+                if ((i % 8) == 0) {
+                    document.write("<strong><p>"+i+"</p></strong>");
+                }
+            }
+
+        } else {
+            document.write('Los multiplos entre '+numero2+' y '+numero1+' son:')
+            for (i = numero2; i <= numero1; i++){
+                if ((i % 8) == 0) {
+                    document.write("<strong><p>"+i+"</p></strong>");
+                }
+            }
+
+
+        }
+
+
+    </script>
+</body>
+</html>

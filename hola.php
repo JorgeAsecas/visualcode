@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<?php
+echo "hola\n";
+echo cos(4 * 3);
+echo "\n";
+$num = 3;
+echo $num;
+# sfdghsdgsdgfgsd
+
+
+// sdfgsdfgsdfgsdfg
+
+
+/* fdsgsdfgsdfgfds
+sdfgsdfgdsgsdf
+sdfgsdfgsdgsdf
+sdfgsdg+ */
+
+
+/**
+ * fgjh
+ * fgjh
+ * fgjh
+ * fgjh
+ *
+ */
+
+?>
+
+</body>
+</html>

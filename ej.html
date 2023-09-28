@@ -1,0 +1,27 @@
+<body>
+    <div>
+   <h1 id="cabecera">Desarrollo Web En Entorno Cliente</h1>
+   <div id="div1"></div>
+   <div id="div2"></div>
+   <div id="div3"></div>
+    </div>
+    <button onclick="mensajeconsola('Holaaaaaaaaa');">
+        Mensaje por consola
+        </button>
+    <script>
+    function mensajeconsola(consola) {
+    console.log(consola);
+    }
+   alert("OlA kE aSe");
+   document.write ("<p>Escribiendo cualquier cosa</p>");
+   document.getElementById("div1").innerHTML=("Subtitulo");
+    var nombre=prompt("Introduce tu nombre:" );
+    var numero1=parseInt(prompt("Introduce un numero:" ));
+    document.write ("Tu numero dividido entre dos es: "+(numero1/ 2));
+   document.getElementById("div2").innerHTML=("<p>Este es tu nombre:"+nombre+"</p>");
+   var c=confirm("Elige una opcion");
+   var texto;
+   if (c){texto="Aceptar"}else {texto="Cancelar"}
+   document.getElementById("div3").innerHTML=("Has pulsado: "+texto);
+    </script>
+    </body>

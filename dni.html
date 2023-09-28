@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
+        var dni=(prompt("Introduce un DNI:" ));
+        letradni = dni.slice(-1);
+        numero = dni.substring(0, (dni.length - 1));
+        if (numero < 0 || numero >  99999999) {
+            document.write("El DNI introducido no es valido")
+
+        } else {
+            pos = (numero % 23)
+            for (i = 0; i <= letras.length - 1; i++) {
+                letra = letras.slice(i, i + 1)
+                console.log(letra)
+
+            }
+        }
+
+        console.log(letradni);
+        console.log(dni);
+        console.log(numero);
+        console.log((49049405 % 23))
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
