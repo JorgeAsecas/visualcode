@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+
+    <select name="nombre1" id="nombre1" onchange="actualizar()">
+
+        <option value="Sr Parker">Sr Parker</option>;
+        <option value="Sr Van Cleve">Sr Van Cleve</option>;
+        <option value="Sra Sparr">Sra Sparr</option>;
+        <option value="Sr Kalehoff">Sr Kalehoff</option>;
+    </select>
+    &nbsp lo hizo en el &nbsp
+    <select name="sitio" id="sitio" onchange="actualizar2()">
+
+        <option value="comedor">comedor</option>;
+        <option value="galeria">galeria</option>;
+        <option value="sala de billar">sala de billar</option>;
+        <option value="salon de baile">salon de baile</option>;
+    </select>
+    &nbsp con el &nbsp
+    <select name="arma" id="arma" onchange="actualizar3()">
+
+        <option value="cuchillo">cuchillo</option>;
+        <option value="trofeo">trofeo</option>;
+        <option value="palo de billar">palo de billar</option>;
+        <option value="veneno">veneno</option>;
+    </select>
+    &nbsp &nbsp &nbsp
+    <button onclick="comprobar();">
+        Comprobar
+      </button>
+
+      <script>
+        nombres = ['Sr Parker', "Sr Van Cleve", "Sra Sparr", "Sr Kalehoff"];
+        armas = ["cuchillo", "trofeo",  "palo de billar", "veneno"];
+        sitios = ["comedor", "galeria", "sala de billar", "salon de baile" ];
+        function comprobar() {
+            function verificacion(pos) {
+                return value == nombres[pos] && value2 == sitios[pos] && value3 == armas[pos];
+            }
+            function mensaje(pos) {
+                return nombres[pos] + " lo hizo en el "+ sitios[pos]+ " con el "+ armas[pos];
+            }
+            if (verificacion(0)) {
+                window.alert("Correcto");
+                window.alert(mensaje(0));
+
+            } else if (verificacion(1)) {
+                window.alert("Correcto");
+                window.alert(mensaje(1));
+
+
+            } else if (verificacion(2)) {
+                window.alert("Correcto");
+                window.alert(mensaje(2));
+
+            }  else if (verificacion(3)) {
+                window.alert("Correcto");
+                window.alert(mensaje(3));
+
+          } else {
+            window.alert("Incorrecto");
+
+          }
+        }
+        function actualizar() {
+
+        select = document.getElementById('nombre1');
+        value = select.options[select.selectedIndex].value;
+        console.log(value)
+        }
+        function actualizar2() {
+        select = document.getElementById('sitio');
+        value2 = select.options[select.selectedIndex].value;
+        console.log(value2)
+        }
+        function actualizar3() {
+        select = document.getElementById('arma');
+        value3 = select.options[select.selectedIndex].value;
+        console.log(value3)
+        }
+
+          </script>
+</body>
+</html>

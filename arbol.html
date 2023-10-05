@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	pre {display:inline-block;}
+	</style>
+</head>
+
+<body>
+	<pre id="arbol1"></pre> <pre id="arbol2"></pre>
+</body>
+
+<script>
+    max=(prompt("Introduce fila maxima" ));
+function arbolA(id) {
+
+
+
+	var j=1;
+
+	var result="";
+
+	for(i=1;i<=max;i+=2)
+	{
+		result+="<br>"+(Array((1+(Math.ceil(max/2))-j)).join(" ")+Array(i+1).join("*"));
+		j=j+1;
+	}
+	document.getElementById(id).innerHTML=result;
+}
+arbolA("arbol1");
+
+function arbolb(id) {
+var j=1;
+
+var result="";
+for(i=max;i<=1;i-=2)
+	{
+		result+="<br>"+(Array((1+(Math.ceil(max/2))-j)).join(" ")+Array(i+1).join("*"));
+		j=max-1;
+	}
+
+
+	document.getElementById(id).innerHTML=result;
+}
+arbolb("arbol2");
+</script>
+</html>

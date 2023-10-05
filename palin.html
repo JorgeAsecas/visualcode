@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <script>
+        palin = prompt("Introduzca un palindromo");
+        palinlimpio = palin.replace(/ /g, "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        palinreverso = "";
+
+        for ( i = palinlimpio.length - 1; i >= 0; i--) {
+            palinreverso += palinlimpio[i];
+
+        }
+        if (palinlimpio == palinreverso) {
+            window.alert('Eso es un palindromo¡¡')
+
+        } else {
+            window.alert('Eso no es un palindromo¡¡')
+        }
+    </script>
+</body>
+</html>

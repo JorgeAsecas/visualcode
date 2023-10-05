@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <script>
+
+        var numero=(prompt("Introduce un numero entre el 1 y el 5:" ));
+        var literales = ["Uno", "Dos", "Tres", "Cuatro", "Cinco"];
+
+        if (numero <= 5 && numero >= 1) {
+            for (i = 0; i <= numero - 1; i++) {
+               literal = literales[i]
+            }
+        }else{
+            document.write("Numero incorrecto");
+        }
+        document.write("El literal de tu numero es: " + literal);
+    </script>
+
+
+
+</body>
+</html>

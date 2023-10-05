@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+
+    <button onclick="pasarn();">
+        pasar a numero
+      </button>
+      <button onclick="pasarb();">
+        pasar a booleano
+      </button>
+      <br><br><br><br>
+      <script>
+        cad1 = ['1', "0", "hola", null];
+        cad2 = [1, 0, "hola", null];
+
+
+        document.write("Esta es la cadena original  " + cad1)
+
+        function pasarn() {
+
+            for (i = 0; i < cad1.length ; i++) {
+                cad1[i] = Number(cad1[i])
+
+            }
+            window.alert("El array pasado a numero  " + cad1);
+
+          }
+        function pasarb() {
+
+            for (i = 0; i < cad2.length ; i++) {
+                cad2[i] = Boolean(cad2[i])
+
+            }
+            window.alert("El array pasado a booleano  " + cad2);
+
+          }
+
+
+          </script>
+</body>
+</html>

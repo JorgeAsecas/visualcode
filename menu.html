@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <script>
+        boton = true;
+        setTimeout(function(){
+
+        numero=(prompt("Introduce una opcion" ));
+
+        }, 2000);
+        while (boton) {
+            document.write('"Calculadora"' + "<br><br>");
+            document.write("Pulse 1 para sumar" + "<br><br>");
+            document.write("Pulse 2 para restar" + "<br><br>");
+            document.write("Pulse 3 para multiplicar" + "<br><br>");
+            document.write("Pulse 4 para dividir" + "<br><br>");
+            document.write("Pulse 5 para obtener el modulo" + "<br><br>");
+            document.write("Pulse 6 para salir" + "<br><br>");
+
+            boton = false;
+            setTimeout(function(){
+                switch (numero) {
+                case "1":
+                    window.alert("Sumar");
+                    boton = true;
+                    break;
+                case "2":
+                    window.alert("restar");
+                    boton = true;
+                    break;
+                case "3":
+                    window.alert("multiplicar");
+                    boton = true;
+                    break;
+
+                case "4":
+                    window.alert("dividir");
+                    boton = true;
+                    break;
+                case "5":
+                    window.alert("obtener el modulo");
+                    boton = true;
+                    break;
+                case "6":
+                    window.alert("salir");
+                    boton = false;
+                    break;
+                default:
+                    window.alert("opcion incorrecta");
+                    boton = true;
+                    break;
+                }
+            }, 2001);
+
+
+
+            }
+
+
+
+    </script>
+
+
+
+</body>
+</html>

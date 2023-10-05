@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+
+</head>
+<body>
+    <script>
+
+numero=parseInt( prompt("Introduzca la altura"));
+
+// Con cualquier numero de asteriscos
+for (i = 0; i < numero; i++) {
+    for (j = 0; j <= i; j++) {
+        if (i>=j) {document.write("&nbsp");}
+
+        document.write("*");
+        }
+        document.write("<br>")
+        }
+for (i = 0; i < numero; i++) {
+    for (j = (numero - 1); j > i; j--) {
+        document.write("*");
+        }
+        document.write("<br>")
+        }
+
+// Con numeros inpares de asteriscos
+for (i = 0; i < numero; i++) {
+    if (i % 2 == 0) {
+        for (j = 0; j <= i; j++) {
+
+        document.write("*");
+        }
+        document.write("<br>")
+        }
+
+        }
+for (i = 0; i < numero; i++) {
+    if (i % 2 == 1) {
+    for (j = (numero - 1); j > i; j--) {
+        document.write("*");
+        }
+        document.write("<br>")
+        }
+    }
+
+    </script>
+</body>
+</html>

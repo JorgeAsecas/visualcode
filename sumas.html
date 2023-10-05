@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <script>
+
+        var numero=(prompt("Introduce un numero:" ));
+        var p = confirm("Quieres la primera opcion? (cancelar elegira la segunda opcion)")
+        suma = 0;
+        if (p) {
+            for (i = 0; i <= numero.length - 1; i++) {
+                if (numero[i] == "." || numero[i] == ",") {
+                    break;
+                } else {
+                    suma += parseInt(numero[i]);
+                    console.log(suma);
+                    console.log(numero);
+
+                }
+
+            }
+            document.write("La suma de tu numero es: " + suma);
+        } else {
+            for (i = 0; i <= numero.length - 1; i++) {
+                if (numero[i] == "." || numero[i] == ",") {
+
+                } else {
+                    suma += parseInt(numero[i]);
+                    console.log(suma);
+                    console.log(numero);
+
+                }
+
+            }
+            document.write("La suma de tu numero es: " + suma);
+        }
+
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+  </head>
+  <body>
+    <script>
+        n=parseInt( prompt("Introduzca la altura"));
+        for(f=1;f<=n;f++)
+            {
+                for(c=1;c<=n-f;c++)
+                    document.write("&nbsp");
+                for (c=1;c<=f;c++){
+                    document.write("*");
+                    }
+                    document.write("</br>");
+            }
+        for(f=n - 1;f>=1;f--)
+            {
+                for(c=1;c<=n-f;c++)
+                    document.write("&nbsp");
+                for (c=f; c>=1;c--){
+                    document.write("*");
+                    }
+                document.write("</br>");
+
+            }
+    </script>
+  </body>
+  </html>

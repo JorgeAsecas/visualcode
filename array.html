@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <script>
+        valores = [true, 5, false, "hola", "adios", 2];
+        if (valores[3].length < valores[4].length) {
+            document.write("La palabra " + valores[4] + " es mas larga")
+
+        } else {
+            document.write("La palabra " + valores[3] + " es mas larga")
+        }
+        document.write("<br><br>Operaciones logicas: <br><br>");
+        document.write(valores[0] && valores[2] + "<br><br>" + valores[0] || valores[2]);
+        document.write("<br><br>Operaciones aritmeticas: <br><br>");
+        document.write((valores[1] + valores[5]) + "<br><br>" + (valores[1] * valores[5]))
+
+
+    </script>
+</body>
+</html>
