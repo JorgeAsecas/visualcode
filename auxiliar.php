@@ -91,7 +91,7 @@ function mostrar_resultado($res)
 
 function obtener_get($par)
 {
-    return isset($_GET[$par]) ? trim($_GET[$par]) : null;
+    return isset($_POST[$par]) ? trim($_POST[$par]) : null;
 }
 
 function selected($option, $op)

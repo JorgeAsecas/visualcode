@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <script>
+        var frase=((prompt("Introduce una palabra: " )));
+
+        switch (frase.toLowerCase()) {
+            case "casa":
+                document.write ("La traduccion de tu palabras es House");
+            break;
+            case "mesa":
+                document.write ("La traduccion de tu palabras es Table");
+            break;
+            case "perro":
+                document.write ("La traduccion de tu palabras es Dog");
+            break;
+
+            case "gato":
+                document.write ("La traduccion de tu palabras es Cat");
+                break;
+            default:
+            document.write ("Esa palabra no esta en el diccionario");
+                break;
+        }
+
+    </script>
+</body>
+</html>

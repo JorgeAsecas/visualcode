@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <script>
+        var frase=(prompt("Introduce una frase: " ));
+        var fraseresuelta = "";
+            for ( i of frase ) {
+                    if (isNaN(i) ) {
+
+                        console.log(i)
+                        fraseresuelta += i;
+                    }
+                }
+        document.write ("Tu frase sin numeros es: "+(fraseresuelta));
+    </script>
+</body>
+</html>

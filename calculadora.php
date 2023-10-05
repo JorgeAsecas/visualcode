@@ -19,7 +19,7 @@
     $op  = obtener_get('op');
     ?>
 
-    <form action="calculadora.php" method="get">
+    <form action="calculadora.php" method="post">
         <label for="op1">Operando 1:</label>
         <input type="text" name="op1" id="op1" value="<?= $op1 ?>"><br>
         <label for="op2">Operando 2:</label>
