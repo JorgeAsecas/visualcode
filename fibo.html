@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <script>
+        max=(parseInt(prompt("Introduce valor de N" )));
+            val = [0 ,1]
+
+            for (i = 2; i <= max; i++) {
+
+                val[i] = val[i - 1] + val[i - 2]
+
+            }
+
+            document.write("Tu numero es: "+val[max])
+    </script>
+</body>
+</html>

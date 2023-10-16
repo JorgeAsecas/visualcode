@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <script>
+    fecha=(prompt("Introduce tu fecha de nacimiento: " ));
+    lista = fecha.split("/");
+
+    hoy = new Date();
+    nacimiento = new Date(lista[2], (lista[1] -1), lista[0]);
+
+    mseg = hoy - nacimiento;
+    seg = mseg / 1000;
+    min = seg / 60;
+    hora = min / 60;
+    dia = hora / 24;
+    año = dia / 365;
+    meses = año * 12;
+
+    document.write("Tienes " + parseInt(meses) + " meses" + "<br>");
+    document.write("Tienes " + parseInt(dia) + " dias" + "<br>");
+    document.write("Tienes " + parseInt(año) + " años" + "<br>");
+
+
+
+
+
+    </script>
+
+</body>
+</html>
