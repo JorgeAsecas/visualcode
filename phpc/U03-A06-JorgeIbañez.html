@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <select name="nombre1" id="nombre1" onchange="actualizar()">
+
+        <option value="-12">Línea internacional de fecha del oeste</option>;
+        <option value="-11">Isla Midway, Samoa</option>;
+        <option value="-10">Hawai</option>;
+        <option value="-9">Alaska</option>;
+        <option value="-8">Hora del pacífico </option>;
+        <option value="-7">Hora de las montañas rocosas</option>;
+        <option value="-6">América central</option>;
+        <option value="-5">Hora central</option>;
+        <option value="-4">Hora del Atlántico </option>;
+        <option value="-3">Buenos Aires, Asunción, Brasilia, Montevideo</option>;
+        <option value="-2">Atlántico central</option>;
+        <option value="-1">Azores</option>;
+        <option value="0">Hora del meridiano </option>;
+        <option value="1"> París, Madrid</option>;
+        <option value="2">El Cairo</option>;
+        <option value="3">Nairobi</option>;
+        <option value="4">Bakú</option>;
+        <option value="5">Ekaterimburgo</option>;
+        <option value="6">Astana</option>;
+        <option value="7">Bangkok</option>;
+        <option value="8">Ulán Bator</option>;
+        <option value="9">Tokio</option>;
+        <option value="10">Sidney</option>;
+        <option value="11">Islas Salomón</option>;
+        <option value="12">Wellington</option>;
+    </select>
+    <button onclick="comprobar();">
+        Comprobar
+      </button>
+    <script>
+        function comprobar() {
+            hoy = new Date();
+
+            sinzona = hoy.getHours() - 2
+            sin = hoy.setHours(hoy.getHours() - 2)
+
+            utc = hoy.setHours(hoy.getHours() + parseInt(value))
+            console.log(hoy)
+            window.alert("La hora para esa zona horaria es " + hoy.getHours() + ":" + hoy.getMinutes() + ":" + hoy.getSeconds())
+
+        }
+        function actualizar() {
+
+            select = document.getElementById('nombre1');
+            value = select.options[select.selectedIndex].value;
+            console.log(value)
+            }
+
+    </script>
+</body>
+</html>

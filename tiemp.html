@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <script>
+        hoy = new Date();
+        fin = new Date(2023, 12 ,31);
+        cal = fin - hoy;
+        seg = cal / 1000;
+        min = seg / 60;
+        hora = min / 60;
+        dia = hora / 24;
+        document.write("Quedan " + parseInt(dia) + " dias en el año" + "<br>");
+        document.write("Y " + cal + " segundos")
+
+
+
+    </script>
+</body>
+</html>

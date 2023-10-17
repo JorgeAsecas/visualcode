@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+
+    <button onclick="circulo();">
+        Calcular circulo
+    </button>
+    <button onclick="triangulo();">
+        Calcular triangulo
+    </button>
+    <script>
+        function circulo() {
+            radio = (prompt("Introduce radio: " ));
+            window.alert("El area de un circulo es: " + ((Math.PI * radio) ** 2).toFixed(2) + " cm2");
+
+
+
+        }
+        function triangulo() {
+            base = (prompt("Introduce base: " ));
+            altura = (prompt("Introduce altura: " ));
+            window.alert("El area de un triangulo es: " + ((base * altura) / 2) + " cm2");
+
+
+
+        }
+
+
+    </script>
+</body>
+</html>

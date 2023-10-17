@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        hoy = new Date();
+        hora = hoy.getHours();
+        if (hora <= 12) {
+            document.write("Son las " + hora + " horas" + "  AM");
+
+        }else {
+        document.write("Son las " + (hora - 12) + " horas" + "  PM");
+
+        }
+    </script>
+</body>
+</html>
