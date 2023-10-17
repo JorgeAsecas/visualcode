@@ -10,7 +10,7 @@
     <br>
     <table border="1">
         <thead>
-            <th><p id="res">Sin resultado</p>
+            <th  width="150" ><p id="res">Sin resultado</p>
         </thead>
         <tbody>
 
@@ -65,12 +65,12 @@
                         </button>
                     </td>
                     <td>
-                        <button onclick="circulo();">
+                        <button onclick="div();">
                         /
                         </button>
                     </td>
                     <td>
-                        <button onclick="circulo();">
+                        <button onclick="mult();">
                         *
                         </button>
                     </td>
@@ -97,7 +97,7 @@
                         </button>
                     </td>
                     <td>
-                        <button onclick="circulo();">
+                        <button onclick="resta();">
                         -
                         </button>
                     </td>
@@ -286,7 +286,31 @@
             ope = "+"
             res = numero1 + ope
             console.log(res)
-            document.getElementById("res").innerHTML = res + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+            document.getElementById("res").innerHTML = res
+            boton = true
+
+        }
+        function resta() {
+            ope = "-"
+            res = numero1 + ope
+            console.log(res)
+            document.getElementById("res").innerHTML = res
+            boton = true
+
+        }
+        function mult() {
+            ope = "*"
+            res = numero1 + ope
+            console.log(res)
+            document.getElementById("res").innerHTML = res
+            boton = true
+
+        }
+        function div() {
+            ope = "/"
+            res = numero1 + ope
+            console.log(res)
+            document.getElementById("res").innerHTML = res
             boton = true
 
         }
