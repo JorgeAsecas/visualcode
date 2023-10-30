@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Título de la WEB</title>
+<meta charset="UTF-8">
+<meta name="title" content="Título de la WEB">
+<meta name="description" content="Descripción de la WEB">
+<link href="estilos.css" rel="stylesheet">
+</head>
+<body>
+    <form method="post" action="/send/">
+        Número:
+        <input type="number" name="number" placeholder="5"
+        min="5" max="10" step="2">
+        Fecha de inicio:
+        <input type="date" name="date" placeholder="2024-07-22"
+        min="2024-01-01" max="2024-12-01" step="2">
+        </form>
+
+        <form method="post" action="/send/">
+            Nombre:
+            <input type="text" name="username" required>
+        </form>
+        <form method="post" action="/send/">
+            Nombre:
+            <input type="text" name="username" disabled>
+            <input type="submit" disabled>
+        </form>
+        <form method="post" action="/send/">
+            Nombre:
+            <input type="text" name="username" placeholder="bbuuuuuuuuuu" readonly>
+            <input type="submit">
+        </form>
+</body>
+</html>

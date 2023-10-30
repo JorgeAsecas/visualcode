@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <br>
+    <br>
+    <p id="mayus"></p>
+    <br>
+    <br>
+
+
+    <button onclick="comprobar();">
+        generar verdadero
+      </button>
+      <button onclick="comprobar1();">
+        generar falso
+      </button>
+
+    <script>
+
+        function comprobar() {
+
+            str = String("hola mundo")
+            num = Number(1)
+            arra = Array([1,"hola mundo"])
+            bool = Boolean(true)
+            window.alert(str + "  //  " + num + "  //  " + arra + "  //  " + bool)
+            window.alert(Boolean(str) + " " + Boolean(num) + " " + Boolean(arra) + " " + Boolean(bool))
+        }
+        function comprobar1() {
+
+            str1 = String("")
+            num1 = Number(0)
+            bool1 = Boolean(false)
+            window.alert(str1 + "  //  " + num1 + "  //  " + bool1)
+            window.alert(Boolean(str1) + " " + Boolean(num1) + " " + Boolean(bool1))
+        }
+    </script>
+</body>
+</html>

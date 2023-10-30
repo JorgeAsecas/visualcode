@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <br>
+    <br>
+    <p id="validar"></p>
+    <br>
+    <br>
+    <label for="p">matricula</label>
+    <input type="text" name="p" id="p" onchange="actualizar1()">
+
+    <button onclick="comprobar();">
+        comprobar
+      </button>
+
+    <script>
+
+        function actualizar1() {
+
+            matricula = document.getElementById('p').value;
+        }
+
+        function comprobar() {
+            exp = /^[0-9]{4}\s([a-z]{3}|[A-Z]{3})/
+            ok = exp.test(matricula)
+            if (ok) {
+                document.getElementById("validar").innerHTML = "Matricula correcta"
+            }else{
+                document.getElementById("validar").innerHTML = "Matricula incorrecta"
+            }
+        }
+    </script>
+</body>
+</html>

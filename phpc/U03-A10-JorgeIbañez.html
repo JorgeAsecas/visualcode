@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <br>
+    <br>
+    <p id="res"></p>
+    <p id="ext"></p>
+    <br>
+    <br>
+    <label for="p">principio</label>
+    <input type="text" name="p" id="p" onchange="actualizar1()">
+    <label for="f">fin</label>
+    <input type="text" name="f" id="f" onchange="actualizar2()">
+    <button onclick="comprobar();">
+        Extraer
+      </button>
+
+    <script>
+        frase = (prompt("Introduce una frase: " ));
+        document.getElementById("res").innerHTML = "Frase original: " + frase
+
+        function actualizar1() {
+
+            principio = document.getElementById('p').value;
+            console.log(principio)
+        }
+        function actualizar2() {
+
+            fin = document.getElementById('f').value;
+            console.log(fin)
+        }
+        function comprobar() {
+
+            ext = frase.slice(principio, fin)
+            document.getElementById("ext").innerHTML = "Extracto: " + ext
+            console.log(ext)
+        }
+    </script>
+</body>
+</html>

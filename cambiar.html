@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <br>
+    <br>
+    <p id="frase"></p>
+    <p id="posicion"></p>
+    <p id="caracteres"></p>
+
+    <br>
+    <br>
+    <label for="p">frase</label>
+    <input type="text" name="p" id="p" onchange="actualizar1()">
+    <label for="f">Buscar</label>
+    <input type="text" name="f" id="f" onchange="actualizar2()">
+    <button onclick="comprobar();">
+        Buscar
+      </button>
+
+    <script>
+
+
+        function actualizar1() {
+
+            frase = document.getElementById('p').value;
+            document.getElementById("frase").innerHTML = "Frase: " + frase
+
+        }
+        function actualizar2() {
+
+            extracto = document.getElementById('f').value;
+
+        }
+        function comprobar() {
+            frasecor = frase.indexOf(extracto)
+            if (frasecor == (-1)) {
+                document.getElementById("posicion").innerHTML = "No se ha encontrado"
+                document.getElementById("caracteres").innerHTML = ""
+            }else{
+                document.getElementById("caracteres").innerHTML = extracto.length
+                frasenuev = frase.replace(extracto, "dwecl")
+                document.getElementById("posicion").innerHTML = frasecor
+                document.getElementById("frase").innerHTML = "Frase: " + frasenuev
+
+
+
+            }
+
+
+
+        }
+    </script>
+</body>
+</html>

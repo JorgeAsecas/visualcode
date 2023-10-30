@@ -1,0 +1,14 @@
+input,
+textarea {
+padding: 5px;
+color: #fff;
+}
+::placeholder {
+color: darkgreen;
+}
+:is(input, textarea):invalid {
+background: red;
+}
+:is(input, textarea):valid {
+background: green;
+}

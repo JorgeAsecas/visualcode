@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <br>
+    <br>
+    <p id="mayus"></p>
+    <br>
+    <br>
+    <label for="p">frase</label>
+    <input type="text" name="p" id="p" onchange="actualizar1()">
+
+    <button onclick="comprobar();">
+        comprobar
+      </button>
+
+    <script>
+        document.getElementById("res").innerHTML = "Frase original: " + frase
+
+        function actualizar1() {
+
+            frase = document.getElementById('p').value;
+            console.log(frase)
+        }
+
+        function comprobar() {
+            fraseminus = frase.toLowerCase()
+            frasemayus = frase.toUpperCase()
+            if (frase == frasemayus || frase == fraseminus)
+            {
+                if (frase == frasemayus) {
+
+                    document.getElementById("mayus").innerHTML = "Tu frase solo tiene mayusculas"
+                } else {
+                    document.getElementById("mayus").innerHTML = "Tu frase solo tiene minusculas"
+                }
+
+            }else{
+                document.getElementById("mayus").innerHTML = "Tu frase tiene una combinacion de mayusculas y minusculas"
+            }
+        }
+    </script>
+</body>
+</html>

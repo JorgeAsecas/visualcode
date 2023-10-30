@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <br>
+    <br>
+    <p id="validar"></p>
+    <br>
+    <br>
+    <label for="p">hora</label>
+    <input type="text" name="p" id="p" onchange="actualizar1()">
+
+    <button onclick="comprobar();">
+        comprobar
+      </button>
+
+    <script>
+
+        function actualizar1() {
+
+            hora = document.getElementById('p').value;
+        }
+
+        function comprobar() {
+            exp = /((^[0-1]{1}[0-9]{1}|^[2]{1}[0-3]{1})\:[0-5]{1}[0-9]{1}\:[0-5]{1}[0-9]{1}|(^[0-1]{1}[0-9]{1}|^[2]{1}[0-3]{1})\:[0-5]{1}[0-9]{1})$/
+            ok = exp.test(hora)
+            if (ok) {
+                document.getElementById("validar").innerHTML = "Hora correcta"
+            }else{
+                document.getElementById("validar").innerHTML = "Hora incorrecta"
+            }
+        }
+    </script>
+</body>
+</html>
