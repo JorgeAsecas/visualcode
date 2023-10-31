@@ -88,3 +88,17 @@
           </script>
 </body>
 </html>
+function comprobar() {
+    arraa = []
+    con = 0
+    textoarr = texto.trim().split(/(\s)/)
+    for (i = 0; i < textoarr.length; i++) {
+        if (textoarr[i] == "\n" || textoarr[i] == ".") {
+
+            arraa[con] = textoarr[i + 1]
+            con++
+            console.log(arraa)
+        }
+
+
+    }

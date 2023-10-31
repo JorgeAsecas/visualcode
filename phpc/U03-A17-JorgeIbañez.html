@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <br>
+    <br>
+    <p id="palabras"></p>
+    <br>
+    <br>
+    <label for="texto">Escribe aqui</label>
+    <textarea id="texto" style="width: 200px; height: 200px;" onchange="actualizar1()"></textarea>
+
+
+
+    <button onclick="comprobar();">
+        comprobar
+      </button>
+
+    <script>
+
+        function actualizar1() {
+
+            texto = document.getElementById('texto').value;
+            console.log(texto)
+        }
+
+        function comprobar() {
+            reg = /^(\w+\s?)|(\.\s\w+\s?)|(\?\s\w+\s?)|(\!\s\w+\s?)/gm
+            reg1 = /^(\.)|(\?)|(\!)|(\s)/gm
+            matc = texto.match(reg)
+            enseniar = []
+            for (i = 0; i < matc.length; i++) {
+                enseniar += " " + matc[i].replace(reg1, '') + " - "
+
+                console.log(enseniar)
+            }
+            document.getElementById("palabras").innerHTML = enseniar
+
+
+            }
+
+
+
+
+
+    </script>
+</body>
+</html>
