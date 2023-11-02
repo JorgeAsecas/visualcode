@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <br>
+    <br>
+    <p id="p" >Texto a agrandar, reducir o dejar de forma original</p>
+    <br>
+    <br>
+
+    <button onclick="agrandar();">
+        Agrandar
+      </button>
+    <button onclick="reducir();">
+        Reducir
+    </button>
+    <button onclick="original();">
+        Original
+    </button>
+
+    <script>
+        function agrandar() {
+            document.getElementById("p").style.fontSize = '50px'
+
+
+        }
+        function reducir() {
+            document.getElementById("p").style.fontSize = '3px'
+
+        }
+        function original() {
+            document.getElementById("p").style.fontSize = '16px'
+
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <br>
+    <br>
+    <p id="p"></p>
+    <br>
+    <br>
+
+    <button onclick="comprobar();">
+        navigator
+      </button>
+    <button onclick="comprobar1();">
+        screen
+    </button>
+    <select name="color" id="color" onchange="actualizar()">
+
+        <option value="yellow">amarillo</option>;
+        <option value="red">rojo</option>;
+        <option value="blue">azul</option>;
+        <option value="green">verde</option>;
+        <option value="white">blanco</option>;
+    </select>
+    <button onclick="comprobar2();">
+        color
+    </button>
+
+    <script>
+        function actualizar() {
+
+            select = document.getElementById('color');
+            value = select.options[select.selectedIndex].value;
+
+        }
+
+
+        function comprobar() {
+            codename = navigator.appCodeName
+            name = navigator.appName
+            version = navigator.appVersion
+            plata = navigator.platform
+            produc = navigator.product
+            cookie = navigator.cookieEnabled
+            idioma = navigator.language
+            idiomas = navigator.languages
+            user = navigator.userAgent
+            document.getElementById("p").innerHTML = "Idioma del navegador: " + idioma
+            + "<br>" + "Idiomas del navegador: " + idiomas + "<br>" + "Datos del navegador: " + user
+            + "<br>" + "Navegador: " + codename + "<br>" + "Nombre: " + name
+            + "<br>" + "Versión: " + version + "<br>" + "Plataforma: " + plata
+            + "<br>" + "Cokkies activadas: " + cookie
+
+        }
+        function comprobar1() {
+            altura = screen.height
+            alturadis = screen.availHeight
+            anchura = screen.width
+            anchuradis = screen.availWidth
+            color = screen.colorDepth
+            altsintoolbar = window.innerHeight
+            barra = altura - alturadis
+            barranav = altura - altsintoolbar
+
+            document.getElementById("p").innerHTML = "Altura total: " + altura
+            + "<br>" + "Altura disponible: " + alturadis + "<br>" + "Anchura total: "
+            + anchura +  "<br>" + "Anchura disponible: " + anchuradis + "<br>" +
+            "Profundidad del color: " + color + "<br>" +
+            "La barra de windows tiene " + barra + " pixeles de alto y " +
+            anchura + " pixeles de ancho" + "<br>" + "La barra del navegador tiene " + barranav + " pixeles de alto y " +
+            anchura + " pixeles de ancho"
+
+        }
+        function comprobar2() {
+            document.bgColor = value
+
+
+        }
+    </script>
+</body>
+</html>
