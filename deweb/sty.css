@@ -1,0 +1,13 @@
+div.a {
+    padding-top: 30px;
+    padding-bottom: 80px;
+    padding-right: 50px;
+    padding-left: 40px;
+    border: 1px solid black;
+    background-color: azure;
+    }
+    div.b { /* Propiedad corta */
+    padding: 30px 50px 80px 40px; /*superior, derecha, inferior e izquierda*/
+    border: 1px solid black;
+    background-color: darkseagreen;
+    }

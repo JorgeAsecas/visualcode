@@ -23,18 +23,23 @@
     </button>
 
     <script>
+        ori = 16
         function agrandar() {
-            document.getElementById("p").style.fontSize = '50px'
+            ori += 10
+            document.getElementById("p").style.fontSize = ori + "px"
+            console.log(ori)
 
 
         }
         function reducir() {
-            document.getElementById("p").style.fontSize = '3px'
-
+            ori -= 5
+            document.getElementById("p").style.fontSize = ori + "px"
+            console.log(ori)
         }
         function original() {
-            document.getElementById("p").style.fontSize = '16px'
-
+            ori = 16
+            document.getElementById("p").style.fontSize = ori + "px"
+            console.log(ori)
 
         }
     </script>

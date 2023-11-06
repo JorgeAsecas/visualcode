@@ -1,9 +1,5 @@
-/* body { background-image: url("https://bit.ly/2slA7jo");} */
-/* body { background-image: url("https://bit.ly/2slA7jo"); background-repeat: repeat-x;}*/
-
-/*body { background-image: url("https://bit.ly/2slA7jo"); background-repeat: repeat-y;}*/
-
-/*body { background-image: url("https://bit.ly/2slA7jo"); background-repeat: no-repeat;}*/
-/*
-body { background-image: url("https://bit.ly/2slA7jo"); background-repeat: repeat;}*/
-body  { background-image: url("https://bit.ly/2slA7joo"); background-size: 100px 100px; background-position: right top; }
+.a { table-layout: auto;} /* Columnas se ajustan al contenido*/
+.b { table-layout: auto; width: 100%; } /* Columnas se ajustan al
+contenido y al 100% */
+.c { table-layout: fixed; width: 400px; } /* Columnas con ancho fijo,
+hay que especificar el ancho con la propiedad width */
