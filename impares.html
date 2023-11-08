@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <p id="l"></p>
+    <br>
+    <p id="p"></p>
+    <br>
+    <br>
+
+    <script>
+
+        array = []
+        for (i = 0; i <= 21; i++) {
+            if ((i % 2) == 1) {
+                array.push(i)
+
+            }
+        }
+        sum = 0
+        for (i = 0; i < array.length; i++) {
+            sum += array[i]
+
+        }
+        inv = array.sort(function(a, b) {return b-a})
+        document.getElementById("l").innerHTML = sum
+        document.getElementById("p").innerHTML = inv
+        console.log(array)
+    </script>
+</body>
+</html>

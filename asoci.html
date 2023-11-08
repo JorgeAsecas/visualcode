@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+    function ordenarPorIndice(tabla) {
+        indicesOrdenados = new Array();
+        objectOrdenado = []; // o var objectOrdenado = {};
+        for (indice in tabla) { // extraemos los índices y los ordenamos
+            indicesOrdenados.push(indice);
+        }
+        indicesOrdenados.sort(); // o .sort(funcion)
+        for (indice in indicesOrdenados) { // recreamos la tabla segúnel nuevo orden de los índices
+            objectOrdenado[indicesOrdenados[indice]] = tabla[indicesOrdenados[indice]];
+        }
+        return objectOrdenado;
+    }
+
+    </script>
+</body>
+</html>
