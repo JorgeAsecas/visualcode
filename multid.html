@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <br>
+    <p id="l"></p>
+    <br>
+    <p id="p"></p>
+    <br>
+    <br>
+    <p id="q"></p>
+    <br>
+    <br>
+    <button onclick="generar();">
+        Generar
+      </button>
+
+    </table>
+    <script>
+
+        function generar() {
+            numeros = []
+            for (i = 0; i < 10; i++) {
+                numeros.push(Math.floor(Math.random() * 10))
+
+            }
+            menor8 = numeros.filter(filtro)
+            impar = [...menor8]
+            for (i = 0; i < impar.length; i++) {
+                if ((impar[i] % 2) == 1) {
+                    impar.fill("impar", i, i + 1)
+
+                }
+
+            }
+
+            document.getElementById("l").innerHTML = numeros
+            document.getElementById("p").innerHTML = menor8
+            document.getElementById("q").innerHTML = impar
+        }
+        function filtro(num) {
+            for ( i = 0; i < 10 ; i++) {
+                if (num >= 8) {
+                return false;
+                }
+            }
+            return num >= 0;
+            }
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

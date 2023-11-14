@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <br>
+    <p id="l"></p>
+    <br>
+    <p id="p"></p>
+    <br>
+    <br>
+    <label for="alu1">alumno 1</label>
+    <input type="text" name="alu1" id="alu1" onchange="actualizar1()">
+    <label for="nota1">notas(separados por espacio)</label>
+    <input type="text" name="nota1" id="nota1" onchange="notas1()">
+    <br>
+    <br>
+    <label for="alu2">alumno 2</label>
+    <input type="text" name="alu2" id="alu2" onchange="actualizar2()">
+    <label for="nota2">notas(separados por espacio)</label>
+    <input type="text" name="nota2" id="nota2" onchange="notas2()">
+    <br>
+    <br>
+    <label for="alu3">alumno 3</label>
+    <input type="text" name="alu3" id="alu3" onchange="actualizar3()">
+    <label for="nota3">notas(separados por espacio)</label>
+    <input type="text" name="nota3" id="nota3" onchange="notas3()">
+    <br>
+    <br>
+    <label for="alu4">alumno 4</label>
+    <input type="text" name="alu4" id="alu4" onchange="actualizar4()">
+    <label for="nota4">notas(separados por espacio)</label>
+    <input type="text" name="nota4" id="nota4" onchange="notas4()">
+    <br>
+    <br>
+    <label for="alu5">alumno 5</label>
+    <input type="text" name="alu5" id="alu5" onchange="actualizar5()">
+    <label for="nota5">notas(separados por espacio)</label>
+    <input type="text" name="nota5" id="nota5" onchange="notas5()">
+    <button onclick="generar();">
+        Generar
+      </button>
+      <br>
+      <br>
+      <table border="1">
+        <thead>
+            <tr>
+                <th>Nombres</th>
+                <th>nota 1</th>
+                <th>nota 2</th>
+                <th>nota 3</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+    <script>
+        tableBody = document.getElementById('tbody');
+        function actualizar1() {
+
+        alumno1 = document.getElementById('alu1').value;
+        }
+        function actualizar2() {
+
+        alumno2 = document.getElementById('alu2').value;
+        }
+
+        function actualizar3() {
+
+        alumno3 = document.getElementById('alu3').value;
+        }
+
+        function actualizar4() {
+
+        alumno4 = document.getElementById('alu4').value;
+        }
+
+        function actualizar5() {
+
+        alumno5 = document.getElementById('alu5').value;
+        }
+        function notas1() {
+
+        not1 = document.getElementById('nota1').value;
+        }
+        function notas2() {
+
+        not2 = document.getElementById('nota2').value;
+        }
+        function notas3() {
+
+        not3 = document.getElementById('nota3').value;
+        }
+        function notas4() {
+
+        not4 = document.getElementById('nota4').value;
+        }
+        function notas5() {
+
+        not5 = document.getElementById('nota5').value;
+        }
+        function generar() {
+            alumnos = [alumno1, [not1.split(" ")],
+                       alumno2, [not2.split(" ")],
+                       alumno3, [not3.split(" ")],
+                       alumno4, [not4.split(" ")],
+                       alumno5, [not5.split(" ")]]
+
+
+                    c = 0
+                    c2 = 1
+                    for (i = 0; i < alumnos.length; i++) {
+                        nombre = '<td>' + alumnos[c] + '</td>'
+                        notaa1 = '<td>' + alumnos[c2][0][0] + '</td>'
+                        notaa2 = '<td>' + alumnos[c2][0][1] + '</td>'
+                        notaa3 = '<td>' + alumnos[c2][0][2] + '</td>'
+                        c += 2
+                        c2 += 2
+
+                        tableBody.innerHTML += `<tr>${nombre + notaa1 + notaa2 + notaa3}</tr>`;
+                    }
+                }
+
+
+    </script>
+</body>
+</html>

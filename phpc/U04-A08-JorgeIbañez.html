@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <br>
+    <p id="l"></p>
+    <br>
+    <p id="p"></p>
+    <br>
+    <br>
+    <p id="q"></p>
+    <br>
+    <br>
+    <p id="s"></p>
+    <br>
+    <br>
+    <button onclick="generar();">
+        Generar
+      </button>
+
+    </table>
+    <script>
+
+        function generar() {
+            numeros = []
+            for (i = 0; i < 5; i++) {
+                numeros.push(Math.floor(Math.random() * 10))
+
+            }
+            boton = numeros.every(enterosp)
+            document.getElementById("l").innerHTML = numeros
+            document.getElementById("p").innerHTML = boton ? "Todos son enteros y positivos" : "Error"
+            document.getElementById("q").innerHTML = "Multiplicados por 3: " + numeros.map(triple)
+            document.getElementById("s").innerHTML = "La suma de todos los numeros es: " + numeros.reduce(sumatorio)
+        }
+
+        function enterosp(ele, index, array) {
+                return (ele > 0  && Number.isInteger(ele))
+
+            }
+        function triple(num) {
+            return num * 3;
+            }
+        function sumatorio(total, num) {
+            return total + num;
+            }
+    </script>
+</body>
+</html>

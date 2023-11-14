@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <br>
+    <p id="primer"></p>
+    <br>
+    <p id="segundo"></p>
+    <br>
+    <p id="tercer"></p>
+    <br>
+    <p id="cuarto"></p>
+    <br>
+    <p id="quinto"></p>
+    <br>
+    <p id="sexto"></p>
+    <br>
+
+    <label for="val">frase</label>
+    <input type="text" name="val" id="val" onchange="actualizar1()">
+    <button onclick="comprobar();">
+        comprobar
+      </button>
+
+    <script>
+        function actualizar1() {
+
+        valor = document.getElementById('val').value;
+
+        }
+        function comprobar() {
+            array = valor.trim().split(" ")
+            array1 = [...array]
+            array2 = [...array]
+            document.getElementById("primer").innerHTML = "Las palabras son: " + array.join("  --  ")
+            document.getElementById("segundo").innerHTML = "Las palabras colocadas al reves: "
+            + array1.reverse().join("  --  ")
+            document.getElementById("tercer").innerHTML = "La primera palabras es: " + array[0] + "<br>"
+            + "La ultima palabra es: " + array[array.length - 1]
+            document.getElementById("cuarto").innerHTML = "El numero de palabras son: " + array.length
+            document.getElementById("quinto").innerHTML = "Ordenado de 'a' a 'z': " + array2.sort().join("  --  ")
+            document.getElementById("sexto").innerHTML = "Ordenado de 'z' a 'a': " + array2.sort().reverse().join("  --  ")
+
+        }
+
+    </script>
+</body>
+</html>

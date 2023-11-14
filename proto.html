@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <p id="l"></p>
+    <br>
+    <p id="p"></p>
+    <br>
+    <br>
+
+    <script>
+        function getRandom() {
+                return Math.floor(Math.random() * 1000);
+            }
+        array = []
+        for (i = 0; i < 10; i++) {
+
+            array.push(getRandom())
+        }
+        array4 = [157, 162, 224, 315, 358, 481, 489, 739, 867, 918]
+        function quitarfun(array4) {
+            this.array4 = array4
+
+        }
+        Array.prototype.quitar = quitarfun()
+        array.sort(function(a, b) {return a-b})
+        document.getElementById("l").innerHTML = array
+
+        console.log(array)
+        console.log(array4)
+        document.getElementById("p").innerHTML = array.quitarfun
+    </script>
+</body>
+</html>

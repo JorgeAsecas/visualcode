@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <br>
+    <p id="l"></p>
+    <br>
+    <p id="p"></p>
+    <br>
+    <br>
+
+    <script>
+        function getRandom() {
+                return Math.floor(Math.random() * 1000);
+            }
+
+        array = []
+
+        for (i = 0; i < 10; i++) {
+
+            array.push(getRandom())
+        }
+
+        Array.prototype.maxmin = function() {
+            array.sort(function(a, b) {return a-b})
+            array.pop()
+            array.shift()
+
+        }
+        document.getElementById("l").innerHTML = array
+
+        array.maxmin()
+
+        document.getElementById("p").innerHTML = array
+    </script>
+</body>
+</html>

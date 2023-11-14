@@ -1,0 +1,130 @@
+.container{
+    position: relative;
+    }
+    .caja{
+    width: 180px;
+    height: 180px;
+    color: #FFF;
+    text-align: center;
+    line-height: 180px;
+    margin: 15px;
+    float: left;
+    font-size: 18px;
+    font-family: Arial;
+    }
+    .caja1{
+    background-color: #C0392B;
+    cursor: crosshair;
+    }
+    .caja2{
+    background-color: #9B59B6;
+    cursor: help;
+    }
+    .caja3{
+    background-color: #2980B9;
+    cursor: move;
+    }
+    .caja4{
+        background-color: #3498DB;
+        cursor: pointer;
+        }
+        .caja5{
+        background-color: #17A589;
+        cursor: progress;
+        }
+        .caja6{
+        background-color: #F1C40F;
+        cursor: text;
+        }
+        .caja7{
+        background-color: #E67E22;
+        cursor: wait;
+        }
+        .caja8{
+        background-color: #95A5A6;
+        cursor: vertical-text;
+        }
+        .caja9{
+        background-color: #2C3E50;
+        cursor: alias;
+        }
+        .caja10{
+        background-color: grey;
+        cursor: no-drop;
+        }
+        .caja11{
+            background-color: black;
+            cursor: grab;
+            }
+            .caja12{
+            background-color: #C0392B;
+            cursor: grabbing;
+            }
+            .caja13{
+            background-color: #9B59B6;
+            cursor: zoom-in;
+            }
+            .caja14{
+            background-color: #2980B9;
+            cursor: zoom-out
+            }
+            .caja15{
+            background-color: #3498DB;
+            cursor: not-allowed;
+            }
+            .caja16{
+            background-color: #17A589;
+            cursor: progress;
+            }
+            .caja17{
+            background-color: #F1C40F;
+            cursor: copy
+            }
+            .caja18{
+                background-color: #E67E22;
+                cursor: ew-resize;
+                }
+                .caja19{
+                background-color: #95A5A6;
+                cursor: ns-resize;
+                }
+                .caja20{
+                background-color: #2C3E50;
+                cursor: nwse-resize;
+                }
+                .caja21{
+                background-color: grey;
+                cursor: nesw-resize;
+                }
+                .caja21{
+                background-color: black;
+                cursor: nesw-resize;
+                }
+                .caja26{
+                background-color: #C0392B;
+                cursor: url(https://cdn-iconspng.flaticon.com/128/2662/2662839.png), pointer;
+                }
+                .caja21{
+                    background-color: #9B59B6;
+                    cursor: nesw-resize;
+                    }
+                    .caja22{
+                    background-color: #2980B9;
+                    cursor: col-resize;
+                    }
+                    .caja23{
+                    background-color: #3498DB;
+                    cursor: row-resize;
+                    }
+                    .caja24{
+                    background-color: #17A589;
+                    cursor: context-menu;
+                    }
+                    .caja25{
+                    background-color: #E67E22;
+                    cursor: none;
+                    }
+                    .caja26{
+                    background-color: #95A5A6;
+                    cursor: url(https://cdn-iconspng.flaticon.com/128/2662/2662839.png), pointer;
+                    }
