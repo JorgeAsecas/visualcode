@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <br>
+    <p id="k"></p>
+    <br>
+    <br>
+    <p id="l"></p>
+    <br>
+    <p id="p"></p>
+    <br>
+    <br>
+    <p id="q"></p>
+    <br>
+    <br>
+    <p id="w"></p>
+    <br>
+    <br>
+    <p id="j"></p>
+    <br>
+    <br>
+    <p id="p1"></p>
+    <br>
+    <br>
+    <p id="p2"></p>
+    <br>
+    <br>
+    <p id="p3"></p>
+    <br>
+    <br>
+    <button onclick="generar();">
+        Generar
+      </button>
+
+    </table>
+    <script>
+
+        function vehiculo(marca, modelo, color, anio) {
+            this.marca = marca
+            this.modelo = modelo
+            this.color = color
+            this.anio = anio
+
+            this.mostrarDatos = function() {
+                document.getElementById("p").innerHTML = this.marca + ", " + this.modelo + ", " + this.color + ", " + this.anio
+
+            }
+            this.acelerar = function(velo) {
+                this.velo = velo
+                document.getElementById("q").innerHTML = "El coche a acelerado " + this.velo + " KMh"
+                document.wr
+
+            }
+            this.arrancar = function() {
+                document.getElementById("w").innerHTML = "El coche " + this.marca + ", " + this.modelo + ", " + this.color + " ha arrancado."
+
+            }
+            this.frenar = function() {
+                document.getElementById("j").innerHTML = "El coche " + this.marca + ", " + this.modelo + ", " + this.color + " ha parado."
+
+            }
+            }
+            cochealumno = new vehiculo('Toyota', "189", 'Azul', 2003)
+            cocheprofesor = new vehiculo('BMW', '301', 'Rojo', 2010)
+
+
+
+            document.getElementById("l").innerHTML = cochealumno['color']
+            document.getElementById("k").innerHTML = cochealumno.marca
+             cochealumno.acelerar(100)
+             cochealumno.mostrarDatos()
+             cochealumno.arrancar()
+
+            vehiculo.prototype.cilindrada = "300CC"
+
+
+            document.getElementById("p1").innerHTML = Object.keys(cochealumno)
+            document.getElementById("p2").innerHTML = Object.getOwnPropertyNames(cochealumno)
+            propiedades = []
+            con = 0
+            for (propiedad in cochealumno) {
+                propiedades[con] = propiedad
+                con++
+
+            }
+            document.getElementById("p3").innerHTML = propiedades
+
+
+
+
+
+    </script>
+</body>
+</html>

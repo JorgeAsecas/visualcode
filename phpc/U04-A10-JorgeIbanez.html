@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <table class="tabla2" border="1">
+        <tbody>
+
+                <tr>
+                    <td>
+                        <p id="linea1p1">X</p>
+                    </td>
+                    <td>
+                        <p id="linea1p2">X</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="linea2p1">X</p>
+                    </td>
+                    <td>
+                        <p id="linea2p2">X</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="linea3p1">X</p>
+                    </td>
+                    <td>
+                        <p id="linea3p2">X</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="linea4p1">X</p>
+                    </td>
+                    <td>
+                        <p id="linea4p2">X</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="linea5p1">X</p>
+                    </td>
+                    <td>
+                        <p id="linea5p2">X</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="linea6p1">X</p>
+                    </td>
+                    <td>
+                        <p id="linea6p2">X</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="linea7p1">X</p>
+                    </td>
+                    <td>
+                        <p id="linea7p2">X</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="linea8p1">X</p>
+                    </td>
+                    <td>
+                        <p id="linea8p2">X</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="linea9p1">X</p>
+                    </td>
+                    <td>
+                        <p id="linea9p2">X</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="linea10p1">X</p>
+                    </td>
+                    <td>
+                        <p id="linea10p2">X</p>
+                    </td>
+                </tr>
+
+        </tbody>
+    </table>
+
+    </table>
+    <script>
+
+        function vehiculo(marca, modelo, color, anio) {
+            this.marca = marca
+            this.modelo = modelo
+            this.color = color
+            this.anio = anio
+
+            this.mostrarDatos = function() {
+
+
+            }
+            this.acelerar = function(velo) {
+                this.velo = velo
+
+
+            }
+            this.arrancar = function() {
+
+
+            }
+            this.frenar = function() {
+
+
+            }
+            }
+            cochealumno = new vehiculo('Toyota', "189", 'Azul', 2003)
+            cocheprofesor = new vehiculo('BMW', '301', 'Rojo', 2010)
+            cochealumno.acelerar(100)
+
+            vehiculo.prototype.cilindrada = "300CC"
+
+
+            propiedades = []
+            con = 0
+            for (propiedad in cochealumno) {
+                propiedades[con] = propiedad
+                con++
+
+            }
+            for (i = 0; i <= 9; i++) {
+
+                    document.getElementById("linea" + (i + 1) + "p" + 1).innerHTML = propiedades[i]
+                    document.getElementById("linea" + (i + 1) + "p" + 2).innerHTML = cochealumno[propiedades[i]]
+
+
+            }
+
+
+
+
+
+
+    </script>
+</body>
+</html>

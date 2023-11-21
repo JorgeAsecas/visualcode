@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Desarrollo Web En Entorno Cliente</title>
+    <style>
+        h1 {
+            text-align: right;
+        }
+        #cuadrado{
+            margin:200px;
+            border: solid 1px blue;
+            background:yellow;
+            width:30px;
+            height:30px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class='tablero'>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    <script>
+
+
+
+        tablero = new Array(20)
+        for (i = 0; i < tablero.length; i++) {
+
+            tablerofila = new Array("&nbsp;", "&nbsp;", "&nbsp;&nbsp;|&nbsp;&nbsp;","&nbsp;&nbsp;|&nbsp;&nbsp;","&nbsp;&nbsp;|&nbsp;&nbsp;","&nbsp;&nbsp;|&nbsp;&nbsp;","&nbsp;&nbsp;|&nbsp;&nbsp;","&nbsp;&nbsp;|&nbsp;&nbsp;","&nbsp;&nbsp;|&nbsp;&nbsp;","&nbsp;&nbsp;|&nbsp;&nbsp;","&nbsp;&nbsp;|&nbsp;&nbsp;","&nbsp;&nbsp;|&nbsp;&nbsp;","&nbsp;&nbsp;|&nbsp;&nbsp;","&nbsp;&nbsp;|&nbsp;&nbsp;","&nbsp;&nbsp;|&nbsp;&nbsp;","&nbsp;&nbsp;|&nbsp;&nbsp;","&nbsp;&nbsp;|&nbsp;&nbsp;","&nbsp;&nbsp;|&nbsp;&nbsp;","&nbsp;&nbsp;|&nbsp;&nbsp;","&nbsp;&nbsp;|&nbsp;&nbsp;","&nbsp;&nbsp;|&nbsp;&nbsp;")
+
+
+
+            for (fila = 0; fila < tablerofila.length; fila++) {
+                tablerofilamod = [...tablerofila]
+                numeros = Math.floor(Math.random() * 20)
+
+                tablerofilamod.splice(numeros, 1, "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
+                tablero.splice(fila, 1, tablerofilamod)
+                console.log(tablerofilamod)
+
+                console.log(numeros)
+            }
+
+        }
+        for (i = 0; i < tablero.length; i++) {
+            for (ancho = 0; ancho < tablero.length; ancho++) {
+                document.write(tablero[i][ancho])
+                console.log(tablero[i][ancho])
+            }
+            document.write("<br>")
+        }
+
+
+        console.log(tablero)
+
+    </script>
+</body>
+</html>
