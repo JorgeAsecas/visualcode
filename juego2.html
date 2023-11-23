@@ -8,7 +8,7 @@
 <body>
     <br>
     <br>
-    <button onclick="generar();">
+    <button onclick="generar(0);">
         Nuevo Tablero
     </button>
 
@@ -16,7 +16,7 @@
         <tbody>
 
                 <tr width="75px" align="center">
-                    <td width="75px">
+                    <td width="75px" id="td1p1">
                         <div id="l1p1">
                         <button onclick="linea1p1();">
                             xxx
@@ -24,7 +24,7 @@
                         </div>
                         <p id="linea1p1">X</p>
                     </td>
-                    <td width="75px" >
+                    <td width="75px" id="td1p2">
                         <div id="l1p2">
                         <button onclick="linea1p2();">
                             xxx
@@ -32,7 +32,7 @@
                     </div>
                         <p id="linea1p2">X</p>
                     </td>
-                    <td width="75px">
+                    <td width="75px" id="td1p3">
                         <div id="l1p3">
                         <button onclick="linea1p3();">
                             xxx
@@ -40,7 +40,7 @@
                     </div>
                         <p id="linea1p3">X</p>
                     </td>
-                    <td width="75px">
+                    <td width="75px" id="td1p4">
                         <div id="l1p4">
                         <button onclick="linea1p4();">
                             xxx
@@ -48,7 +48,7 @@
                     </div>
                         <p id="linea1p4">X</p>
                     </td>
-                    <td width="75px">
+                    <td width="75px" id="td1p5">
                         <div id="l1p5">
                         <button onclick="linea1p5();">
                             xxx
@@ -61,23 +61,23 @@
                     </td>
                 </tr>
                 <tr align="center">
-                    <td >
-                        <div id="l2p1">
+                    <td id="td2p1">
+                        <div id="l2p1" >
                         <button onclick="linea2p1();">
                             xxx
                         </button>
                     </div>
                         <p id="linea2p1">X</p>
                     </td>
-                    <td>
-                        <div id="l2p2">
+                    <td id="td2p2">
+                        <div id="l2p2" >
                         <button onclick="linea2p2();">
                             xxx
                         </button>
                     </div>
                         <p id="linea2p2">X</p>
                     </td>
-                    <td>
+                    <td id="td2p3">
                         <div id="l2p3">
                         <button onclick="linea2p3();">
                             xxx
@@ -85,7 +85,7 @@
                     </div>
                         <p id="linea2p3">X</p>
                     </td>
-                    <td>
+                    <td id="td2p4">
                         <div id="l2p4">
                         <button onclick="linea2p4();">
                             xxx
@@ -93,7 +93,7 @@
                     </div>
                         <p id="linea2p4">X</p>
                     </td>
-                    <td>
+                    <td id="td2p5">
                         <div id="l2p5">
                         <button onclick="linea2p5();">
                             xxx
@@ -106,7 +106,7 @@
                     </td>
                 </tr>
                 <tr align="center">
-                    <td>
+                    <td id="td3p1">
                         <div id="l3p1">
                         <button onclick="linea3p1();">
                             xxx
@@ -114,7 +114,7 @@
                     </div>
                         <p id="linea3p1">X</p>
                     </td>
-                    <td>
+                    <td id="td3p2">
                         <div id="l3p2">
                         <button onclick="linea3p2();">
                             xxx
@@ -122,7 +122,7 @@
                     </div>
                         <p id="linea3p2">X</p>
                     </td>
-                    <td>
+                    <td id="td3p3">
                         <div id="l3p3">
                         <button onclick="linea3p3();">
                             xxx
@@ -130,7 +130,7 @@
                     </div>
                         <p id="linea3p3">X</p>
                     </td>
-                    <td>
+                    <td id="td3p4">
                         <div id="l3p4">
                         <button onclick="linea3p4();">
                             xxx
@@ -138,7 +138,7 @@
                     </div>
                         <p id="linea3p4">X</p>
                     </td>
-                    <td>
+                    <td id="td3p5">
                         <div id="l3p5">
                         <button onclick="linea3p5();">
                             xxx
@@ -151,7 +151,7 @@
                     </td>
                 </tr>
                 <tr align="center">
-                    <td>
+                    <td id="td4p1">
                         <div id="l4p1">
                         <button onclick="linea4p1();">
                             xxx
@@ -160,7 +160,7 @@
                     </div>
                         <p id="linea4p1">X</p>
                     </td>
-                    <td>
+                    <td id="td4p2">
                         <div id="l4p2">
                         <button onclick="linea4p2();">
                             xxx
@@ -168,7 +168,7 @@
                     </div>
                         <p id="linea4p2">X</p>
                     </td>
-                    <td>
+                    <td id="td4p3">
                         <div id="l4p3">
                         <button onclick="linea4p3();">
                             xxx
@@ -176,7 +176,7 @@
                     </div>
                         <p id="linea4p3">X</p>
                     </td>
-                    <td>
+                    <td id="td4p4">
                         <div id="l4p4">
                             <button onclick="linea4p4();">
                                 xxx
@@ -184,7 +184,7 @@
                         </div>
                         <p id="linea4p4">X</p>
                     </td>
-                    <td>
+                    <td id="td4p5">
                         <div id="l4p5">
                         <button onclick="linea4p5();">
                             xxx
@@ -197,7 +197,7 @@
                     </td>
                 </tr>
                 <tr align="center">
-                    <td>
+                    <td id="td5p1">
                         <div id="l5p1">
                         <button onclick="linea5p1();">
                             xxx
@@ -205,7 +205,7 @@
                     </div>
                         <p id="linea5p1">X</p>
                     </td>
-                    <td>
+                    <td id="td5p2">
                         <div id="l5p2">
                         <button onclick="linea5p2();">
                             xxx
@@ -213,7 +213,7 @@
                     </div>
                         <p id="linea5p2">X</p>
                     </td>
-                    <td>
+                    <td id="td5p3">
                         <div id="l5p3">
                         <button onclick="linea5p3();">
                             xxx
@@ -221,7 +221,7 @@
                     </div>
                         <p id="linea5p3">X</p>
                     </td>
-                    <td>
+                    <td id="td5p4">
                         <div id="l5p4">
                         <button onclick="linea5p4();">
                             xxx
@@ -229,7 +229,7 @@
                     </div>
                         <p id="linea5p4">X</p>
                     </td>
-                    <td>
+                    <td id="td5p5">
                         <div id="l5p5">
                         <button onclick="linea5p5();">
                             xxx
@@ -266,6 +266,24 @@
     <script>
         puntuacion = 0
 
+
+
+
+
+
+        function color(filat, columnat,filaa, columnaa) {
+            if (tablero[filaa][columnaa] == 3) {
+                document.getElementById("td" + filat + "p" + columnat).style.backgroundColor = "#00FF00";
+                document.getElementById("td" + filat + "p" + columnat).style.color = "#000000";
+            } else if (tablero[filaa][columnaa] == 2){
+                document.getElementById("td" + filat + "p" + columnat).style.backgroundColor = "#81FF81";
+                document.getElementById("td" + filat + "p" + columnat).style.color = "#000000";
+            } else if (tablero[filaa][columnaa] == 1){
+                document.getElementById("td" + filat + "p" + columnat).style.backgroundColor = "#C8FFC8";
+                document.getElementById("td" + filat + "p" + columnat).style.color = "#000000";
+            }
+
+        }
         function perdiste() {
             window.location.reload()
             alert('Perdiste, crea un nuevo tablero por favor')
@@ -275,10 +293,20 @@
 
         }
         function imprimir(filatabla, columnatabla, filaarray, columnaarray) {
+
             puntuacion += tablero[filaarray][columnaarray] == null ? 0: tablero[filaarray][columnaarray]
             document.getElementById("linea" + filatabla + "p" + columnatabla).innerHTML = condicional(filaarray, columnaarray)
             document.getElementById("totalp").innerHTML = "TOTAL P:" + "<br>" + puntuacion
             document.getElementById("l" + filatabla + "p" + columnatabla).innerHTML = ""
+            color(filatabla, columnatabla, filaarray, columnaarray)
+            if (total == puntuacion) {
+                alert('Ganaste, sigue jugando')
+                generar(puntuacion)
+                total += puntuacion
+            }
+            console.log(total)
+            console.log(puntuacion)
+
         }
         function linea1p1() {
 
@@ -381,8 +409,9 @@
 
         }
 
-        function generar() {
-
+        function generar(puntoos) {
+            total = 0
+            puntuacion = puntoos
             sumapc = 0
             bombasc = 0
             sumapf = 0
@@ -399,10 +428,7 @@
 
         }
 
-        //Puntos a cero
-        //
-        puntuacion = 0
-        document.getElementById("totalp").innerHTML = "P"
+
 
             //Generar array multidimensional con numeros aleatorios
             //en posiciones aleatorias y con huecos aleatorios
@@ -444,6 +470,12 @@
                 bombasf = 0
 
             }
+
+            //Puntos a cero o los mismos si ganas
+            //
+
+            document.getElementById("totalp").innerHTML = "P: " + puntoos
+
             // Volver a escribir las "X"
             //
             for (i = 1; i < 6; i++) {
@@ -463,6 +495,23 @@
                         }
         }
 
+            //Resetear el color
+            //
+            for (i = 1; i < 6; i++) {
+                        for (i2 = 1; i2 < 6; i2++) {
+                            document.getElementById("td" + i + "p" + i2).style.backgroundColor = "white";
+                            document.getElementById("td" + i + "p" + i2).style.color = "#000000";
+
+                        }
+        }
+        //Cuento maximo de puntos para ganar
+        //
+        for (i = 0; i < 5; i++) {
+                for (i2 = 0; i2 < 5; i2++) {
+                    total += tablero[i][i2] == null ? 0: tablero[i][i2]
+
+        }
+    }
         }
 
 
