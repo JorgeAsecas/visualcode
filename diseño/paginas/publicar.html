@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img
+                src="../img/Materiales/Logo_blau_uoc.png" alt="Eniun logo"
+                width="74" height="33"></a>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="https://openaccess.uoc.edu/?locale=es">Buscar</a></li>
+                <li><a href="publicar.html">Publicar</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>O2: Depositar un documento</h1>
+        <article>
+            <form>
+                <fieldset>
+                    <legend>Datos de la publicacion</legend>
+                    <label for="nombre">Nombre del autor.</label>
+                    <input id="nombre" type="text" required pattern="[A-Za-z]{2,64}"><br>
+                    <label for="apellido">Primer apellido del autor</label>
+                    <input id="apellido" type="text" required pattern="[A-Za-z]{2,64}"><br>
+                    <label for="apellido2">Segundo apellido del autor.</label>
+                    <input id="apellido2" type="text" required pattern="[A-Za-z]{2,64}"><br>
+                    <label for="titulo">Título del documento</label>
+                    <input id="titulo" type="text" required><br>
+                    <label for="fecha"> Fecha de creación del documento. </label>
+                    <input id="fecha" type="date" required><br>
+                    <label for="editorial">editorial</label>
+                    <input id="editorial" type="radio" value="Universitat Oberta de
+                    Catalunya"><br>
+                    <label for="tipo">Tipo de documento</label>
+                    <br>
+
+                    <input type="radio" id="tipo" required name="opcion" value="opcion1">
+                    <label for="opcion1">Artículo</label><br>
+                    <input type="radio" id="tipo" required name="opcion" value="opcion2">
+                    <label for="opcion2">Trabajo fin de carrera</label><br>
+                    <input type="radio" id="tipo" required name="opcion" value="opcion3">
+                    <label for="opcion3">Trabajo fin de máster</label><br>
+                    <input type="radio" id="tipo"  required name="opcion" value="opcion4">
+                    <label for="opcion4">Tesis doctoral</label><br>
+
+
+                    <label for="Idioma">Idioma del documento</label>
+                    <br>
+
+                    <input type="radio" id="Idioma" required name="opcion1" value="opcion1">
+                    <label for="opcion1">Castellano</label><br>
+                    <input type="radio" id="Idioma" required name="opcion1" value="opcion2">
+                    <label for="opcion2">Catalán</label><br>
+                    <input type="radio" id="Idioma" required name="opcion1" value="opcion3">
+                    <label for="opcion3">Inglés</label><br>
+                    <input type="radio" id="Idioma" required name="opcion1" value="opcion4">
+                    <label for="opcion4">Otro</label><br>
+
+                    <label for="Resumen">Resumen del documento.</label>
+                    <input id="Resumen" type="text" required><br>
+                    <label for="archivo">Envío del archivo</label>
+                    <input type="file" id="archivo" required name="archivosubido">
+
+
+                </fieldset>
+                <fieldset class="field2">
+                    <legend>Datos de contacto del remitente</legend>
+                    <label for="nombre">Nombre del autor.</label>
+                    <input id="nombre" type="text" required pattern="[A-Za-z]{2,128}"><br>
+                    <label for="apellido">Primer apellido del autor</label>
+                    <input id="apellido" type="text" required pattern="[A-Za-z]{2,128}"><br>
+                    <label for="apellido2">Segundo apellido del autor.</label>
+                    <input id="apellido2" type="text" required pattern="[A-Za-z]{2,128}"><br>
+                    <label for="sexo">Sexo</label>
+                    <br>
+
+                    <input type="radio" id="sexo" name="opcion2" value="opcion1">
+                    <label for="opcion1">Hombre</label><br>
+                    <input type="radio" id="sexo" name="opcion2" value="opcion2">
+                    <label for="opcion2">Mujer</label><br>
+
+                    <label for="documento">Tipo de documento de identidad </label>
+                    <br>
+
+                    <input type="radio" id="documento" required name="opcion3" value="opcion1">
+                    <label for="opcion1">NIF</label><br>
+                    <input type="radio" id="documento" required name="opcion3" value="opcion2">
+                    <label for="opcion2">NIE</label><br>
+                    <input type="radio" id="documento" required name="opcion3" value="opcion3">
+                    <label for="opcion3">PASS</label><br>
+
+                    <label for="correo">email</label><br>
+                    <input type="email" id="correo" name="correo"><br>
+
+                    <label for="idioma1">Idioma en que desea recibirse la respuesta</label>
+                    <br>
+
+                    <input type="radio" id="idioma1" required name="opcion4" value="opcion1">
+                    <label for="opcion1">Castellano</label><br>
+                    <input type="radio" id="idioma1" required name="opcion4" value="opcion2">
+                    <label for="opcion2">Catalan</label><br>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        - Datos adicionales
+                    </legend>
+                    <label for="check">He leído y acepto la política de privacidad y el aviso legal</label>
+                    <input type="checkbox" id="check" required><br>
+                    <label for="check">ese ser informado sobre las nuevas incorporaciones al repositorio</label>
+                    <input type="checkbox" id="check" required><br>
+                </fieldset>
+                <input type="submit" value="Enviar">
+            </form>
+            </article>
+
+    </section>
+    <footer>
+        <h4> realizada por Jorge Ibañez Gonzalez, para la asignatura HTML y CSS</h4>
+        <h4>semestre del curso 2023-2024</h4>
+    </footer>
+
+</body>
+</html>
