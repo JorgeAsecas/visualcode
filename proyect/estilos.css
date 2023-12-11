@@ -193,19 +193,26 @@ p {
      }
      .nosotros3{
         width: 30%;
-text-align: center;
+        text-align: center;
         display:inline-block;
         margin-left: 100px;
     margin-top: 50px;
-    margin-right: 70px;
+        margin-right: 70px;
      }
      .nosotros4{
         width: 30%;
-        text-align: center;
         display:inline-block;
-margin-right: 100px;
-    margin-top: 50px;
 
+        text-align: center;
+    margin-top: 50px;
+     }
+     .nosotros4{
+        width: 30%;
+        display:inline-block;
+
+        text-align: center;
+    margin-top: 50px;
+    margin-right: 75px;
      }
 
 
