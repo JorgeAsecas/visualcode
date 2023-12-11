@@ -1,0 +1,12 @@
+
+body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('fondo.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.tabla2{
+    background-color: rgb(255, 255, 255)
+}
