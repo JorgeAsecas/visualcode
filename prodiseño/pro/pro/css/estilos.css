@@ -447,3 +447,9 @@ span p {
 .audio{
     margin-left: 19%;
 }
+
+.video{
+    margin-top: 70px;
+    margin-left: 15%;
+    padding-bottom: 200px;
+}
