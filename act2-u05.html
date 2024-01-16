@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" id="seccion">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+<main>
+    <div id="mover" style="width:150px; height:60px; border:thin solid rgb(0, 0, 0); text-align: center; margin-left: 0px; margin-top: 200px;">
+Pulsa en cualquier parte
+    </div>
+    <script>
+pos = document.getElementById("mover").getBoundingClientRect()
+
+console.log(pos.top, pos.right, pos.bottom, pos.left)
+function resalta(elEvento) {
+
+ evento = elEvento || window.event
+ console.log(evento.code)
+
+}
+document.getElementById("mover").addEventListener('keydown',resalta,false)
+
+function mover(elEvento) {
+evento = elEvento || window.event
+ console.log(evento.code)
+if (condition) {
+
+} else {
+
+}
+
+}
+
+    </script>
+</main>
+</body>
+</html>

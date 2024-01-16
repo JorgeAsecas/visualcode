@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+
+<div id="imagen" >
+<img src="bomba.jpg" alt="imagen">
+
+</div>
+    <script>
+
+
+
+document.getElementById("imagen").addEventListener("mousedown", imagen);
+
+function imagen(e) {
+
+    container = document.getElementById('imagen')
+    container.innerHTML = '<img src="3778789.png">';
+}
+
+document.getElementById("imagen").addEventListener("mouseup", imagen2);
+
+function imagen2(e) {
+
+    container = document.getElementById('imagen')
+    container.innerHTML = '<img src="bomba.jpg">';
+}
+
+
+
+
+
+    </script>
+
+</body>
+</html>

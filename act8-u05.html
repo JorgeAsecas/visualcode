@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" id="seccion">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+<main>
+
+    <form id="form" method="POST" onsubmit="return true"  enctype ="text/plain">
+    <fieldset>
+        <legend>Datos personales</legend>
+        <label for="nombre">Introduce tu nombre</label>
+        <input id="nombre" type="text" name="Nombre"><br>
+        <p>Mensaje</p>
+        <textarea name="Mensaje" id="mensaje" cols="30" rows="10" placeholder="MENSAJE">
+
+        </textarea>
+</fieldset>
+<p>Elige un color:</p>
+    <input type="radio" id="color" name="Color" value="Rojo">
+    <label for="opcion1">Rojo</label><br>
+    <input type="radio" id="color" name="Color" value="Verde">
+    <label for="opcion2">Verde</label><br>
+    <input type="radio" id="color" name="Color" value="Azul">
+    <label for="opcion2">Azul</label><br>
+
+    <br><br>
+    <label for="asignatura">Selecciona una asignatura</label>
+    <select id="asignatura" name="Asignatura">
+        <option value="Lengua">Lengua</option>
+        <option value="Matematicas">Matematicas</option>
+        <option value="Historia">Historia</option>
+        <option value="Geografia">Geografia</option>
+        <option value="Quimica">Quimica</option>
+        <option value="Biologia">Biologia</option>
+        <option value="Fisica">Fisica</option>
+      </select>
+      <br><br>
+      <p>Selecciona los dias con disponibilidad</p>
+        <label for="check">Lunes</label>
+        <input type="checkbox" id="check0" value="Lunes" name="Dias con Disponibilidad"><br>
+        <label for="check">Martes</label>
+        <input type="checkbox" id="check1" value="Martes" name="Dias con Disponibilidad"><br>
+        <label for="check">Miercoles</label>
+        <input type="checkbox" id="check2" value="Miercoles" name="Dias con Disponibilidad"><br>
+        <label for="check">Jueves</label>
+        <input type="checkbox" id="check3" value="Jueves" name="Dias con Disponibilidad"><br>
+        <label for="check">Viernes</label>
+        <input type="checkbox" id="check4" value="Viernes" name="Dias con Disponibilidad"><br>
+        <br><br>
+
+
+        <label for="dia">Selecciona el dia preferente</label>
+    <select id="dia" name="Dia preferente">
+        <option value="Lunes">Lunes</option>
+        <option value="Martes">Martes</option>
+        <option value="Miercoles">Miercoles</option>
+        <option value="Jueves">Jueves</option>
+        <option value="Viernes">Viernes</option>
+    </select>
+
+
+
+
+
+
+    <br><br>
+
+
+    <input type="submit" value="Haz click para enviar informacion">
+
+    <input type="reset" value="Reset"/>
+</form>
+
+    <script>
+        cuerpo = "Este es <br>el cuerpo <br>del mensaje"
+document.getElementById("form").action = "mailto:jorge.ibanez.1997@gmail.com?subject=asunto&body=srdtdgsdf"
+
+
+console.log(cuerpo)
+    </script>
+</main>
+</body>
+</html>

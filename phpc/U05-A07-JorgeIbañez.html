@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+    <div>
+        <img id="imagen" src="bomba.jpg" alt="imagen">
+
+        </div>
+    <script>
+
+
+
+document.getElementById("imagen").addEventListener("abort", abortar);
+
+function abortar(e) {
+
+    window.alert("La carga se ha abortado")
+}
+
+document.getElementById("imagen").addEventListener("error", error);
+
+function error(e) {
+
+    window.alert("Ha ocurrido un error al cargar la imagen")
+}
+    </script>
+
+</body>
+</html>

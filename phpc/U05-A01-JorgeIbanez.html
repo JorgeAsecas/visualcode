@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" id="seccion">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body>
+<main>
+    <div  style="width:150px; height:60px; border:thin solid rgb(0, 0, 0); text-align: center; margin-left: 40%; margin-top: 200px;">
+Pulsa en cualquier parte
+    </div>
+    <p id="boton" ></p>
+    <script>
+function resalta(elEvento) {
+
+ evento = elEvento || window.event
+ if (evento.button == 0) {
+    window.alert( "Se ha pulsado el boton izquierdo")
+
+
+    } else if (evento.button == 1){
+    window.alert( "Se ha pulsado el boton del medio")
+
+
+    }else{
+    window.alert( "Se ha pulsado el boton derecho")
+    }
+
+}
+
+window.onload = function() {
+ document.getElementById("seccion").onmousedown = resalta;
+
+
+}
+
+    </script>
+</main>
+</body>
+</html>
