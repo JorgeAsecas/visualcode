@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" id="seccion">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body id="cuerpo" onload="carga()" >
+<main>
+
+    <form id="form" method="POST" enctype ="text/plain">
+
+</fieldset>
+<p>¿Que sistema operativo te gusta mas?</p>
+    <input type="radio" id="sistema" name="sistema" value="IOS">
+    <label for="opcion1">IOS</label><br>
+    <input type="radio" id="sistema22" name="sistema" value="Android">
+    <label for="opcion2">Android</label><br>
+    <input type="radio" id="sistema33" name="sistema" value="Windows Phone">
+    <label for="opcion3">Windows Phone</label><br>
+    <input type="radio" id="sistema44" name="sistema" value="Otro">
+    <label for="opcion4">Otro</label><br>
+
+    <br><br>
+
+
+    <input type="submit" value="Votar ¡">
+
+</form>
+
+
+<label for="sistema1">IOS:</label>
+<progress id="sistema1" max="100" value="0"  ></progress>
+<br><br>
+<label for="sistema2">Android:</label>
+<progress id="sistema2" max="100" value="0"></progress>
+<br><br>
+<label for="sistema3">Windows Phone:</label>
+<progress id="sistema3" max="100" value="0"></progress>
+<br><br>
+<label for="sistema4">Otros:</label>
+<progress id="sistema4" max="100" value="0"></progress>
+    <script>
+
+        function carga() {
+            document.querySelector('#sistema1').setAttribute("value" , ((getCookie("IOS") == "") ? 0 : getCookie("IOS")))
+            document.querySelector('#sistema2').setAttribute("value" , ((getCookie("Android") == "") ? 0 : getCookie("Android")))
+            document.querySelector('#sistema3').setAttribute("value" , ((getCookie("Windows Phone") == "") ? 0 : getCookie("Windows Phone")))
+            document.querySelector('#sistema4').setAttribute("value" , ((getCookie("Otro") == "") ? 0 : getCookie("Otro")))
+        }
+
+document.getElementById("form").addEventListener('submit', submitt )
+
+function setCookie(name, value)
+{
+document.cookie = name + "=" + encodeURIComponent(value)
+}
+
+function getCookie(cname) {
+    name = cname + "="
+    decodedc = decodeURIComponent(document.cookie)
+    ca = decodedc.split(";")
+    for (i = 0; i < ca.length; i++) {
+        c = ca[i]
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1)
+
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length)
+
+        }
+    }
+    return ""
+}
+
+
+
+function submitt(eve) {
+    eve.preventDefault()
+
+    datos = new FormData(this)
+    objetodatos = Object.fromEntries(datos.entries())
+    sis = Object.values(objetodatos)
+
+
+
+    if (sis == "IOS") {
+        (getCookie(sis) == "") ? setCookie(sis, 0) : getCookie(sis)
+        console.log(getCookie(sis))
+        setCookie(sis, parseInt(getCookie(sis)) + 1)
+        document.querySelector('#sistema1').setAttribute("value" , getCookie(sis))
+
+        console.log(getCookie(sis))
+
+    } else if (sis == "Android") {
+        (getCookie(sis) == "") ? setCookie(sis, 0) : getCookie(sis)
+        setCookie(sis, parseInt(getCookie(sis)) + 1)
+        document.querySelector('#sistema2').setAttribute("value" , getCookie(sis))
+        console.log(getCookie(sis))
+    }
+     else if (sis == "Windows Phone") {
+        (getCookie(sis) == "") ? setCookie(sis, 0) : getCookie(sis)
+        setCookie(sis, parseInt(getCookie(sis)) + 1)
+        document.querySelector('#sistema3').setAttribute("value" , getCookie(sis))
+        console.log(getCookie(sis))
+    } else {
+        (getCookie(sis) == "") ? setCookie(sis, 0) : getCookie(sis)
+        setCookie(sis, parseInt(getCookie(sis)) + 1)
+        document.querySelector('#sistema4').setAttribute("value" , getCookie(sis))
+        console.log(getCookie(sis))
+        console.log(sis)
+    }
+
+
+
+
+}
+
+    </script>
+</main>
+</body>
+</html>

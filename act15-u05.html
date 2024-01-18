@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" id="seccion">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body id="cuerpo" onload="carga()" >
+<main>
+
+
+    <script>
+    visitas = 0
+
+
+
+
+function setCookie(name, value)
+{
+document.cookie = name + "=" + encodeURIComponent(value)
+}
+
+function getCookie(cname) {
+    name = cname + "="
+    decodedc = decodeURIComponent(document.cookie)
+    ca = decodedc.split(";")
+    for (i = 0; i < ca.length; i++) {
+        c = ca[i]
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1)
+
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length)
+
+        }
+    }
+    return ""
+}
+
+
+
+function carga() {
+    setCookie("visitas", ((getCookie("visitas") == "") ? 1 : parseInt(getCookie("visitas")) + 1))
+    window.alert("Has visitado la pagina: " + getCookie("visitas"))
+
+}
+
+    </script>
+</main>
+</body>
+</html>

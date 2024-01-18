@@ -31,3 +31,9 @@
     </form>
     </body>
 </html>
+e.preventDefault()
+    datos = new FormData(e.target)
+    nombre = datos.get('Nombre')
+    objetodatos = Object.fromEntries(datos.entries())
+    console.log(nombre)
+    document.getElementById("form").action = "mailto:jorge.ibanez.1997@gmail.com?subject=asunto&body=nombre ${Nombre}"
