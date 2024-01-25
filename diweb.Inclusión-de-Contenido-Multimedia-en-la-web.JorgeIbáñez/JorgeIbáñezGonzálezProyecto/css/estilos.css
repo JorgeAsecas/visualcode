@@ -209,15 +209,6 @@ p {
     margin-top: 50px;
 }
 
-.nosotros2 {
-    z-index: -1;
-    width: 30%;
-
-    display: inline-block;
-
-    margin-top: 50px;
-    margin-right: 80px;
-}
 
 .nosotros3 {
     width: 30%;
@@ -593,3 +584,62 @@ padding: 2em;
     height: 40em;
 
   }
+
+
+  /*
+  tabs
+
+
+  */
+
+  .tab{
+background-color: #dddddd;
+padding: 1em;
+width: 30%;
+
+
+
+margin-top: 50px;
+margin-right: 80px;
+
+  }
+  .tab .ul{
+    padding: 0;
+    width: 20px;
+
+display: flex  ;
+flex-flow: row nowrap;
+justify-content: flex-start;
+align-items: center;
+  }
+.tab .li{
+    width: 75px;
+list-style: none;
+
+    margin: 0 1em 0 0;
+}
+.tab .subtab{
+
+    position: relative;
+    min-height: 10vh;
+
+}
+
+.tab  .bloquetab{
+
+position: absolute;
+opacity: 0;
+display: flex;
+font-size: 1em;
+    font-weight: bold;
+}
+
+.tab .li.activot{
+
+
+    font-weight: 700;
+}
+.tab .bloquetab.activot{
+    opacity: 1;
+
+}
