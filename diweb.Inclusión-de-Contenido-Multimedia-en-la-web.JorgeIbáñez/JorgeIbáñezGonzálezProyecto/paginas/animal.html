@@ -44,15 +44,15 @@
                 <div class="carrou" >
                     <div class="grande" >
                         <img src="../img/istockphoto-1256586406-640x640.jpg" class="imgcarrou" alt="Animal" width="300" height="300">
-                        <img src="../img/istockphoto-1256586406-640x640.jpg" class="imgcarrou" alt="Animal" width="300" height="300">
-                        <img src="../img/istockphoto-1256586406-640x640.jpg" class="imgcarrou" alt="Animal" width="300" height="300">
-                        <img src="../img/animales-corre-hierba-perro-wallpaper-preview.jpg" class="imgcarrouactiva" alt="Animal" width="300" height="300">
+                        <img src="../img/animales-corre-hierba-perro-wallpaper-preview.jpg" class="imgcarrou activa" alt="Animal" width="300" height="300">
+                        <img src="../img/istockphoto-1256586406-640x640.jpg" class="imgcarrou activa" alt="Animal" width="300" height="300">
+                        <img src="../img/animales-corre-hierba-perro-wallpaper-preview.jpg" class="imgcarrou activa" alt="Animal" width="300" height="300">
                     </div>
                     <ul class="puntos" >
+                        <li class="punto activo" ></li>
                         <li class="punto" ></li>
                         <li class="punto" ></li>
                         <li class="punto" ></li>
-                        <li class="puntoactivo" ></li>
                     </ul>
 
 
@@ -134,13 +134,19 @@
                     <tbody>
                         <tr>
                             <td class="tg-0lax">
-                                <img src="../img/istockphoto-1256586406-640x640.jpg" alt="Animal" width="200" height="200">
+                                <a href="#" class="a" title="imagen 1" >
+                                <img src="../img/istockphoto-1256586406-640x640.jpg" class="imgl" alt="Animal" width="200" height="200">
+                                </a>
                             </td>
                             <td class="tg-0lax">
-                                <img src="../img/istockphoto-1256586406-640x640.jpg" alt="Animal" width="200" height="200">
+                                <a href="#" class="a" title="imagen 1" >
+                                <img src="../img/istockphoto-1256586406-640x640.jpg" class="imgl" alt="Animal" width="200" height="200">
+                                </a>
                             </td>
                             <td class="tg-0lax">
-                                <img src="../img/istockphoto-1256586406-640x640.jpg" alt="Animal" width="200" height="200">
+                                <a href="#" class="a" title="imagen 1" >
+                                <img src="../img/animales-corre-hierba-perro-wallpaper-preview.jpg" class="imgl" alt="Animal" width="200" height="200">
+                            </a>
                             </td>
                         </tr>
                         <tr>
@@ -175,6 +181,60 @@
                         height="25"></a></li>
         </ul>
     </footer>
+
+
+    <script>
+        grande = document.querySelector('.grande')
+        punto = document.querySelectorAll('.punto')
+        img = document.querySelectorAll('.imgcarrou')
+
+        punto.forEach((cadapunto , i)=> {
+            punto[i].addEventListener('click',()=>{
+                pos = i
+                oper = pos * -25
+
+                grande.style.transform = `translateX(${  oper  }%)`
+
+                punto.forEach((cadapunto, i)=>{
+                    punto[i].classList.remove('activo')
+
+                })
+                punto[i].classList.add('activo')
+                img.forEach((cadaimg, i)=>{
+                    img[i].classList.add('activa')
+
+                })
+                img[i].classList.remove('activa')
+            })
+
+        });
+
+        enlaces = document.querySelectorAll('.a')
+        lightbox = document.querySelector('.lightbox')
+        lightboxgrande = document.querySelector('.grandelight')
+        cerrar = document.querySelector('.cerrar')
+
+        enlaces.forEach(( cadaenlace, i)=>{
+            enlaces[i].addEventListener('click', (e)=>{
+                e.preventDefault()
+                ruta = cadaenlace.querySelector('.imgl').src
+                lightbox.classList.add('activo')
+                lightboxgrande.setAttribute('src', ruta)
+
+
+            })
+
+
+
+        })
+        cerrar.addEventListener('click', ()=>{
+            lightbox.classList.remove('activo')
+            lightboxgrande.setAttribute('src', '')
+
+        })
+
+
+    </script>
 </body>
 
 </html>

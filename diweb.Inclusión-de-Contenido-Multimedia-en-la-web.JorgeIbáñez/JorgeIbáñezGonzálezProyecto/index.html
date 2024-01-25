@@ -38,12 +38,15 @@
     <div class="columna1"></div>
     <div class="columna2"></div>
 
-    <section>
+    <section class="sec" >
+
+        <div class="acordeon" >
+            <div class="bloque" >
         <article class="primero">
 
 
-            <div >
-                <h1 class="hh1">
+        <div >
+            <h1 class="hh12 h2">
                 Bienvenidos a ANIMALES SANLUCAR
             </h1>
         </div>
@@ -51,7 +54,7 @@
 
 
 
-            <p class="segundo">ANIMALES SANLUCAR es una asociación sin ánimo de lucro, legalmente constituida, cuyos
+            <p class="segundo contenido">ANIMALES SANLUCAR es una asociación sin ánimo de lucro, legalmente constituida, cuyos
                 objetivos principales son: <br><br>
 
                 ---Denunciar el abandono y maltrato de los animales y promover su defensa.---<br><br>
@@ -65,9 +68,11 @@
                 Nuestra asociación pone especial empeño en proteger aquellos animales que son peor tratados por la
                 sociedad, por motivos de edad, raza o enfermedad.</p><br>
         </article>
+            </div>
+            <div class="bloque" >
         <article class="tercero">
-            <h1 class="hh12">ANIMALES EN ADOPCION</h1>
-
+            <h1 class="hh12 h2">ANIMALES EN ADOPCION</h1>
+            <div class="contenido" >
             <a  class="tooltip" href="paginas/animal.html"><img class="img" src="img/istockphoto-1256586406-640x640.jpg"
                     alt="Animal" width="200" height="200"> <span class="tooltip-text">
                     <p> Parvati <br> Un animal con mucho cariño para dar </p>
@@ -90,9 +95,10 @@
                     height="200"><span class="tooltip-text">
                     <p> Parvati <br> Un animal con mucho cariño para dar </p>
                 </span> </a>
-
+            </div>
         </article>
-
+    </div>
+    </div>
 
 
     </section>
@@ -110,6 +116,25 @@
                         height="25"></a></li>
         </ul>
     </footer>
+
+
+    <script>
+        bloque = document.querySelectorAll('.bloque')
+        h2 = document.querySelectorAll('.h2')
+
+        h2.forEach((cadah2, i) => {
+            h2[i].addEventListener('click', ()=>{
+                bloque.forEach((cadabloque, i)=>{
+                    bloque[i].classList.remove('activoo')
+                })
+                bloque[i].classList.add('activoo')
+
+            })
+
+        })
+
+    </script>
+
 </body>
 
 </html>
