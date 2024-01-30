@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" id="seccion">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+
+</head>
+<body id="cuerpo"  onload="carga()" >
+<main>
+
+    <form id="form" method="POST" enctype ="text/plain">
+
+</fieldset>
+<p>¿Que tipo de cafe te gusta mas?</p>
+    <input type="radio" id="cafe11" name="cafe" value="Cafe Solo">
+    <label for="opcion1">Cafe Solo</label><br>
+    <input type="radio" id="cafe22" name="cafe" value="Cafe Con Leche">
+    <label for="opcion2">Cafe Con Leche</label><br>
+    <input type="radio" id="cafe33" name="cafe" value="Cafe Descafeinado">
+    <label for="opcion3">Cafe Descafeinado</label><br>
+    <input type="radio" id="cafe44" name="cafe" value="Cafe Con Hielo">
+    <label for="opcion4">Cafe Con Hielo</label><br>
+
+    <br><br>
+
+
+    <input type="submit" value="Votar ¡">
+
+</form>
+
+
+<label for="cafe1">Cafe Solo</label>
+<progress id="cafe1" max="100" value="0"  ></progress>
+<p id="votos1" ></p>
+<br><br>
+<label for="cafe2">Cafe Con Leche</label>
+<progress id="cafe2" max="100" value="0"></progress>
+<p id="votos2" ></p>
+<br><br>
+<label for="cafe3">Cafe Descafeinado</label>
+<progress id="cafe3" max="100" value="0"></progress>
+<p id="votos3" ></p>
+<br><br>
+<label for="cafe4">Cafe Con Hielo</label>
+<progress id="cafe4" max="100" value="0"></progress>
+<p id="votos4" ></p>
+    <script>
+
+
+function carga() {
+    document.querySelector('#cafe1').setAttribute("value" , ((getCookie("Cafe Solo") == "") ? 0 : getCookie("Cafe Solo")))
+    document.querySelector('#cafe2').setAttribute("value" , ((getCookie("Cafe Con Leche") == "") ? 0 : getCookie("Cafe Con Leche")))
+    document.querySelector('#cafe3').setAttribute("value" , ((getCookie("Cafe Descafeinado") == "") ? 0 : getCookie("Cafe Descafeinado")))
+    document.querySelector('#cafe4').setAttribute("value" , ((getCookie("Cafe Con Hielo") == "") ? 0 : getCookie("Cafe Con Hielo")))
+}
+
+
+document.getElementById("form").addEventListener('submit', submitt )
+
+function setCookie(name, value)
+{
+document.cookie = name + "=" + encodeURIComponent(value)
+}
+
+function getCookie(cname) {
+    name = cname + "="
+    decodedc = decodeURIComponent(document.cookie)
+    ca = decodedc.split(";")
+    for (i = 0; i < ca.length; i++) {
+        c = ca[i]
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1)
+
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length)
+
+        }
+    }
+    return ""
+}
+
+
+
+function submitt(eve) {
+eve.preventDefault()
+
+datos = new FormData(this)
+objetodatos = Object.fromEntries(datos.entries())
+cafe = Object.values(objetodatos)
+
+
+
+if (cafe == "Cafe Solo") {
+(getCookie(cafe) == "") ? setCookie(cafe, 0) : getCookie(cafe)
+console.log(getCookie(cafe))
+setCookie(cafe, parseInt(getCookie(cafe)) + 1)
+document.querySelector('#cafe1').setAttribute("value" , getCookie(cafe))
+document.getElementById('votos1').innerHTML = getCookie(cafe)
+console.log(getCookie(cafe))
+
+} else if (cafe == "Cafe Con Leche") {
+(getCookie(cafe) == "") ? setCookie(cafe, 0) : getCookie(cafe)
+setCookie(cafe, parseInt(getCookie(cafe)) + 1)
+document.querySelector('#cafe2').setAttribute("value" , getCookie(cafe))
+console.log(getCookie(cafe))
+console.log(cafe)
+}
+else if (cafe == "Cafe Descafeinado") {
+(getCookie(cafe) == "") ? setCookie(cafe, 0) : getCookie(cafe)
+setCookie(cafe, parseInt(getCookie(cafe)) + 1)
+document.querySelector('#cafe3').setAttribute("value" , getCookie(cafe))
+console.log(getCookie(cafe))
+console.log(cafe)
+} else {
+(getCookie(cafe) == "") ? setCookie(cafe, 0) : getCookie(cafe)
+setCookie(cafe, parseInt(getCookie(cafe)) + 1)
+document.querySelector('#cafe4').setAttribute("value" , getCookie(cafe))
+console.log(getCookie(cafe))
+console.log(cafe)
+}
+
+
+
+
+}
+
+    </script>
+</main>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" id="seccion">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+</head>
+<body >
+
+    <button id="crear" >Crear DIV</button>
+    <button id="borrar" >Borrar DIV</button>
+
+    <div id="contenedor" >
+
+
+    </div>
+
+    <script>
+document.getElementById("crear").addEventListener('click', añadir )
+document.getElementById("borrar").addEventListener('click', borrar )
+cont = document.getElementById("contenedor")
+        function añadir(e) {
+            div = document.createElement("div")
+            textop = (prompt("Introduce el contenido del div" ));
+            texto = document.createTextNode(textop)
+
+            div.appendChild(texto)
+
+            cont.appendChild(div)
+        }
+        function borrar(e) {
+
+            cont.removeChild(cont.lastChild)
+
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>

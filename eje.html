@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="id1" type="text" pattern="[A-Za-z]{2,12}">
+    <button onclick="fun()" >ok</button>
+    <p id="demo" ></p>
+
+    <script>
+function fun() {
+    txt = ""
+    if (document.getElementById("id1").validity.patternMismatch) {
+        txt = "cacacacac"
+
+    } else {
+        txt = "oioioioi"
+    }
+    document.getElementById("demo").innerHTML= txt
+}
+
+
+    </script>
+</body>
+</html>

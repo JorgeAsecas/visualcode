@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" id="seccion">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+    <script src="formulario2.js"></script>
+</head>
+<body>
+<main>
+    <form id="form" method="POST" onsubmit="return true"  enctype ="text/plain"></form>
+    <fieldset>
+        <legend>DATOS PERSONALES DE ACCESO</legend>
+
+        <input placeholder="Nombre:" id="nombre" type="text" name="nombre" pattern="^[A-Z][A-Za-z]{0,2}"><br>
+
+        <input placeholder="Apellido:" id="apellido" type="text" name="apellido" pattern="^[A-Z][A-Za-z]{0,2}"><br>
+
+        <input placeholder="DNI 99.999.999-X:" id="dni" type="text" name="dni" pattern="^\d{9}[-][A-Z]"><br>
+        <input placeholder="Edad:" id="edad" type="text" name="edad"  min="0" max="120"><br>
+        <label for="sexo">Sexo:</label>
+        <select name="sexo">
+            <option value="masculino" >Masculino</option>
+            <option value="femenino" >Femenino</option>
+
+          </select><br>
+        <label for="lnacimiento">Lugar de nacimiento:</label>
+        <input id="lnacimiento" type="text" name="lnacimiento" pattern="^[A-Z][A-Za-z]{0,4}"><br>
+    </fieldset>
+    <input type="submit" value="guardar">
+    <a href="mailto:correo@iesdonana.org" id="maill" ></a>
+</form>
+
+    </script>
+</main>
+</body>
+</html>

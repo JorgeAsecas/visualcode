@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="part" type="text" pattern="[^,]*" />
+<input id="checker" type="button" value="Check validity" />
+
+    <script>
+
+document.getElementById("checker").addEventListener("click", function() {
+  var valid_part = document.getElementById("part");
+
+  if (valid_part.checkValidity()) {
+    console.log("caca")
+    alert("no commas ");
+  }
+  else {
+    alert("si commas");
+  }
+});
+    </script>
+</body>
+</html>

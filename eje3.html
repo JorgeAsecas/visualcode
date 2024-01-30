@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <div>
+          <label>
+            Enter an integer between 1 and 10:
+            <input type="number" min="1" max="10" required />
+          </label>
+        </div>
+        <div><input type="submit" value="submit" /></div>
+      </form>
+      <hr />
+      Invalid values:
+      <ul id="log"></ul>
+
+      <script>
+        const input = document.querySelector("input");
+const log = document.getElementById("log");
+
+input.addEventListener("invalid", (e) => {
+  log.appendChild(
+    Object.assign(document.createElement("li"), {
+      textContent: JSON.stringify(e.target.value),
+    }),
+  );
+});
+      </script>
+</body>
+</html>
