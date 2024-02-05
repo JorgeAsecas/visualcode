@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+    <link rel="stylesheet" href="act5.css">
+</head>
+<body>
+    <div class="carrou" >
+        <div class="grande" >
+            <p class="pcarrou" >Parrafo 1</p>
+            <p class="pcarrou activa" >Parrafo 2</p>
+            <p class="pcarrou activa" >Parrafo 3</p>
+            <p class="pcarrou activa" >Parrafo 4</p>
+        </div>
+        <ul class="puntos" >
+            <li class="punto activo" ></li>
+            <li class="punto" ></li>
+            <li class="punto" ></li>
+            <li class="punto" ></li>
+        </ul>
+
+
+    </div>
+    <script>
+        grande = document.querySelector('.grande')
+        punto = document.querySelectorAll('.punto')
+        p = document.querySelectorAll('.pcarrou')
+
+        punto.forEach((cadapunto , i)=> {
+            punto[i].addEventListener('click',()=>{
+                pos = i
+                oper = pos * -25
+
+                grande.style.transform = `translateX(${  oper  }%)`
+
+                punto.forEach((cadapunto, i)=>{
+                    punto[i].classList.remove('activo')
+
+                })
+                punto[i].classList.add('activo')
+                p.forEach((cadap, i)=>{
+                    p[i].classList.add('activa')
+
+                })
+                p[i].classList.remove('activa')
+            })
+
+        });
+    </script>
+
+</body>
+</html>

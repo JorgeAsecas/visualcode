@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web En Entorno Cliente</title>
+    <link rel="stylesheet" href="act5.css">
+</head>
+<body>
+    <input type="button" value="Pulsa" id="boton"  >
+    <input type="button" value="Pulsa" id="boton"  >
+    <input type="button" value="Pulsa" id="boton"  >
+    <input type="button" value="Pulsa" id="boton"  >
+    <input type="button" value="Pulsa" id="boton"  >
+    <input type="button" value="Pulsa" id="boton"  >
+
+    <input type="button" value="Pulsa" id="bot"  >
+    <script>
+        document.getElementById("bot").addEventListener('click', cambiar )
+
+        function cambiar(e) {
+            boton = document.querySelector('#boton')
+
+            boton.forEach((cadaboton, i)=>{
+
+                if (cadaboton[i].type != 'hidden') {
+
+                cadaboton[i].type = 'hidden'
+
+            } else {
+                cadaboton[i].type = 'button'
+
+            }
+
+            });
+
+
+
+        }
+
+
+    </script>
+
+</body>
+</html>

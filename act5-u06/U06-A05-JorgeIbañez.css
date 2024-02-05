@@ -1,0 +1,60 @@
+.carrou{
+    width: 90%;
+    max-width: 120em;
+
+
+}
+
+.carrou .grande{
+    width: 400%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all .5 ease;
+    transform: translateX(0%);
+
+}
+.carrou .pcarrou{
+    width: calc( 100% / 4);
+
+
+
+}
+.carrou .pcarrou.activa{
+    width: calc( 100% / 4);
+    opacity: 0;
+
+
+
+
+}
+.carrou .puntos{
+    width: 100%;
+    list-style: none;
+    padding: 1em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+
+}
+.carrou .punto{
+    border-radius: 50% 20% / 10% 40%;
+width: 1em;
+height: 1em;
+background-color: rgb(68, 68, 68);
+margin: 1em;
+}
+.carrou .punto.activo{
+    border-radius: 50% 20% / 10% 40%;
+    background-color: #ac3f00;
+    width: 1em;
+height: 1em;
+
+margin: 1em;
+
+
+}
