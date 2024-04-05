@@ -7,36 +7,36 @@
     <link rel="stylesheet" href="act5.css">
 </head>
 <body>
-    <input type="button" value="Pulsa" id="boton"  >
-    <input type="button" value="Pulsa" id="boton"  >
-    <input type="button" value="Pulsa" id="boton"  >
-    <input type="button" value="Pulsa" id="boton"  >
-    <input type="button" value="Pulsa" id="boton"  >
-    <input type="button" value="Pulsa" id="boton"  >
+    <input type="button" value="Pulsa" id="boton" class="boton"  >
+    <input type="button" value="Pulsa" id="boton1" class="boton"  >
+    <input type="button" value="Pulsa" id="boton2" class="boton"  >
+    <input type="button" value="Pulsa" id="boton3" class="boton"  >
+    <input type="button" value="Pulsa" id="boton" class="boton"  >
+    <input type="button" value="Pulsa" id="boton" class="boton"  >
 
     <input type="button" value="Pulsa" id="bot"  >
     <script>
         document.getElementById("bot").addEventListener('click', cambiar )
 
         function cambiar(e) {
-            boton = document.querySelector('#boton')
+            boton = document.querySelectorAll("#boton")
 
-            boton.forEach((cadaboton, i)=>{
+            console.log(boton[3])
 
-                if (cadaboton[i].type != 'hidden') {
+                if (boton.type != 'hidden') {
 
-                cadaboton[i].type = 'hidden'
+                boton.type = 'hidden'
 
             } else {
-                cadaboton[i].type = 'button'
+                boton.type = 'button'
 
             }
 
-            });
+            };
 
 
 
-        }
+
 
 
     </script>
